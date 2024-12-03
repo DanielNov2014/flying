@@ -38,6 +38,12 @@ button3.Size = UDim2.fromScale(0.3, 0.05)
 button3.Position = UDim2.new(0.3, 0, 0.6, 0)
 button3.PlaceholderText = "set jumpheight"
 button3.Parent = frame
+local button4 = Instance.new("TextButton")
+button4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button4.Size = UDim2.fromScale(0.3, 0.1)
+button4.Position = UDim2.new(0.3, 0, 0.25, 0)
+button4.Text = "phsylish char"
+button4.Parent = frame
 
 local text = Instance.new("TextLabel")
 text.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -48,22 +54,35 @@ text.Parent = frame
 local text1 = Instance.new("TextLabel")
 text1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 text1.Text = "pressing (key)"
-text1.Size = UDim2.fromScale(0.4, 0.1)
+text1.Size = UDim2.fromScale(0.6, 0.1)
 text1.Position = UDim2.new(0.3, 0, 0.7, 0)
 text1.Parent = frame
 local text2 = Instance.new("TextLabel")
 text2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 text2.Text = "Down key = down Up key = up"
-text2.Size = UDim2.fromScale(0.4, 0.1)
+text2.Size = UDim2.fromScale(0.6, 0.1)
 text2.Position = UDim2.new(0.3, 0, 0.8, 0)
 text2.Parent = frame
 
 local flying = false
 local sit = false
+local phsy = false
 local humanoid = character.Humanoid
 
 button.MouseButton1Click:Connect(function()
 	flying = not flying
+end)
+button4.MouseButton1Click:Connect(function()
+	phsy = not phsy
+	if phsy == true then
+		humanoidRootPart.Anchored = false
+		text1.Text = "action add physics"
+		character.Humanoid.JumpHeight = 7.2
+		character.Humanoid.WalkSpeed = 16
+	else
+		text1.Text = "action remove physics"
+		humanoidRootPart.Anchored = true
+	end
 end)
 button1.MouseButton1Click:Connect(function()
 	sit = not sit
