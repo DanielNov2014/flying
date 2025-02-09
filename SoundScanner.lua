@@ -66,3 +66,4 @@ for i,v in game:GetDescendants() do
 	end
 end
 end)
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/SoundScanner.lua"))()
