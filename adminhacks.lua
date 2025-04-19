@@ -259,6 +259,9 @@ Music_3.TextWrapped = true
 
 UICorner_13.Parent = Music_3
 
+Music:SetAttribute("id", 142376088)
+Music_2:SetAttribute("id", 1837768745)
+Music_3:SetAttribute("id", 116672405522828)
 for i,v in Musicholder:GetChildren() do
 	if v:IsA("TextButton") then
 		v.MouseButton1Click:Connect(function()
@@ -336,7 +339,7 @@ end)
 
 SRC.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all running random commands") end end
-	for i = 100,0,-1 do
+	for i = 10,0,-1 do
 		if math.random(1,5) == 1 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";re all") end end
 		elseif math.random(1,5) == 2 then
