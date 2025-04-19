@@ -262,17 +262,21 @@ UICorner_13.Parent = Music_3
 Music:SetAttribute("id", 142376088)
 Music_2:SetAttribute("id", 1837768745)
 Music_3:SetAttribute("id", 116672405522828)
-task.wait(3)
-for i,v in Musicholder:GetChildren() do
-	if v:IsA("TextButton") then
-		v.MouseButton1Click:Connect(function()
-			MusicFrame.Visible = false
-			print("click")
-			print(";music "..v:GetAttribute("id"))
-			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music "..v:GetAttribute("id")) end end
-		end)
-	end
-end
+
+Music.MouseButton1Click:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 142376088") end end
+	MusicFrame.Visible = false
+end)
+
+Music_2.MouseButton1Click:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 1837768745") end end
+	MusicFrame.Visible = false
+end)
+
+Music_3.MouseButton1Click:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 116672405522828") end end
+	MusicFrame.Visible = false
+end)
 
 for i,v in Hackui:GetDescendants() do
 	if v:IsA("TextButton") or v:IsA("TextBox") then
