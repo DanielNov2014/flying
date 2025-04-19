@@ -212,28 +212,6 @@ end)
 
 RT.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
-	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
 end)
 
 SF.MouseButton1Click:Connect(function() 
@@ -264,7 +242,7 @@ end)
 
 SRC.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all running random commands") end end
-	for i = 10,0,-1 do
+	for i = 100,0,-1 do
 		if math.random(1,5) == 1 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";re all") end end
 		elseif math.random(1,5) == 2 then
@@ -284,6 +262,6 @@ SRC_2.MouseButton1Click:Connect(function()
 end)
 
 PM.MouseButton1Click:Connect(function()
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 142376088 ;pitch 0.5 ;volume 100") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 142376088") end end
 end)
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/adminhacks.lua"))()
