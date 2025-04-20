@@ -1067,7 +1067,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 				end
 			end
 		end
-		Sky("2577916730")
+		Sky("139345933010644")
 
 		-----------------------------------
 end
