@@ -22,36 +22,46 @@ local Excute = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local TimerButton = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
-local OC = Instance.new("TextButton")
+local Gears = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local MusicFrame = Instance.new("Frame")
+local OC = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
+local MusicFrame = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
 local Musicholder = Instance.new("ScrollingFrame")
 local Music = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
 local Music_2 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local Music_3 = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
+local Music_3 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
 local Timer = Instance.new("Frame")
 local Line = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local TimerText = Instance.new("TextLabel")
 local Text = Instance.new("TextLabel")
 local TimerMenu = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
-local TimerText_2 = Instance.new("TextBox")
 local UICorner_17 = Instance.new("UICorner")
-local RunTimer = Instance.new("TextButton")
+local TimerText_2 = Instance.new("TextBox")
 local UICorner_18 = Instance.new("UICorner")
-local Uidrag = Instance.new("UIDragDetector", Timer)
+local RunTimer = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local GearFrame = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local Gearholder = Instance.new("ScrollingFrame")
+local Gear = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Gear_2 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Gear_3 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
 
 --Properties:
 
 Hackui.Name = "Hackui"
 Hackui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Hackui.Enabled = true
 Hackui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Hackui.ResetOnSpawn = false
 
@@ -71,7 +81,6 @@ AT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AT.BackgroundTransparency = 1.000
 AT.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AT.BorderSizePixel = 0
-AT.Position = UDim2.new(0, 0, 0.0780984685, 0)
 AT.Size = UDim2.new(1, 0, 0.0848896429, 0)
 AT.Font = Enum.Font.SourceSans
 AT.Text = "spam teams"
@@ -88,7 +97,7 @@ RT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RT.BackgroundTransparency = 1.000
 RT.BorderColor3 = Color3.fromRGB(0, 0, 0)
 RT.BorderSizePixel = 0
-RT.Position = UDim2.new(0, 0, 0.17848514, 0)
+RT.Position = UDim2.new(0, 0, 0.103782251, 0)
 RT.Size = UDim2.new(1, 0, 0.0848896429, 0)
 RT.Font = Enum.Font.SourceSans
 RT.Text = "remove teams"
@@ -105,7 +114,7 @@ PM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PM.BackgroundTransparency = 1.000
 PM.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PM.BorderSizePixel = 0
-PM.Position = UDim2.new(0, 0, 0.275476217, 0)
+PM.Position = UDim2.new(0, 0, 0.21096009, 0)
 PM.Size = UDim2.new(1, 0, 0.0848896429, 0)
 PM.Font = Enum.Font.SourceSans
 PM.Text = "play music"
@@ -122,7 +131,7 @@ SF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SF.BackgroundTransparency = 1.000
 SF.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SF.BorderSizePixel = 0
-SF.Position = UDim2.new(0, 0, 0.382437199, 0)
+SF.Position = UDim2.new(0, 0, 0.317921072, 0)
 SF.Size = UDim2.new(1, 0, 0.0848896429, 0)
 SF.Font = Enum.Font.SourceSans
 SF.Text = "sword fight"
@@ -139,7 +148,7 @@ SRC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SRC.BackgroundTransparency = 1.000
 SRC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SRC.BorderSizePixel = 0
-SRC.Position = UDim2.new(0, 0, 0.482606947, 0)
+SRC.Position = UDim2.new(0, 0, 0.423184186, 0)
 SRC.Size = UDim2.new(1, 0, 0.0848896429, 0)
 SRC.Font = Enum.Font.SourceSans
 SRC.Text = "spam random commands"
@@ -190,7 +199,7 @@ TimerButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TimerButton.BackgroundTransparency = 1.000
 TimerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TimerButton.BorderSizePixel = 0
-TimerButton.Position = UDim2.new(0, 0, 0.594661295, 0)
+TimerButton.Position = UDim2.new(0, 0, 0.526749551, 0)
 TimerButton.Size = UDim2.new(1, 0, 0.0848896429, 0)
 TimerButton.Font = Enum.Font.SourceSans
 TimerButton.Text = "TimerMenu"
@@ -200,6 +209,23 @@ TimerButton.TextSize = 14.000
 TimerButton.TextWrapped = true
 
 UICorner_9.Parent = TimerButton
+
+Gears.Name = "Gears"
+Gears.Parent = MainFrame
+Gears.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gears.BackgroundTransparency = 1.000
+Gears.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gears.BorderSizePixel = 0
+Gears.Position = UDim2.new(0, 0, 0.628617108, 0)
+Gears.Size = UDim2.new(1, 0, 0.0848896429, 0)
+Gears.Font = Enum.Font.SourceSans
+Gears.Text = "Gears"
+Gears.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gears.TextScaled = true
+Gears.TextSize = 14.000
+Gears.TextWrapped = true
+
+UICorner_10.Parent = Gears
 
 OC.Name = "O/C"
 OC.Parent = Hackui
@@ -215,7 +241,7 @@ OC.TextScaled = true
 OC.TextSize = 14.000
 OC.TextWrapped = true
 
-UICorner_10.Parent = OC
+UICorner_11.Parent = OC
 
 MusicFrame.Name = "MusicFrame"
 MusicFrame.Parent = Hackui
@@ -226,7 +252,7 @@ MusicFrame.Position = UDim2.new(0.424770653, 0, 0.191850588, 0)
 MusicFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
 MusicFrame.Visible = false
 
-UICorner_11.Parent = MusicFrame
+UICorner_12.Parent = MusicFrame
 
 Musicholder.Name = "Musicholder"
 Musicholder.Parent = MusicFrame
@@ -252,7 +278,7 @@ Music.TextScaled = true
 Music.TextSize = 14.000
 Music.TextWrapped = true
 
-UICorner_12.Parent = Music
+UICorner_13.Parent = Music
 
 UIListLayout.Parent = Musicholder
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -272,7 +298,7 @@ Music_2.TextScaled = true
 Music_2.TextSize = 14.000
 Music_2.TextWrapped = true
 
-UICorner_13.Parent = Music_2
+UICorner_14.Parent = Music_2
 
 Music_3.Name = "Music"
 Music_3.Parent = Musicholder
@@ -289,7 +315,7 @@ Music_3.TextScaled = true
 Music_3.TextSize = 14.000
 Music_3.TextWrapped = true
 
-UICorner_14.Parent = Music_3
+UICorner_15.Parent = Music_3
 
 Timer.Name = "Timer"
 Timer.Parent = Hackui
@@ -307,7 +333,7 @@ Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Line.BorderSizePixel = 0
 Line.Size = UDim2.new(1, 0, 0.172043011, 0)
 
-UICorner_15.Parent = Timer
+UICorner_16.Parent = Timer
 
 TimerText.Name = "TimerText"
 TimerText.Parent = Timer
@@ -346,7 +372,7 @@ TimerMenu.Position = UDim2.new(0.442201853, 0, 0.580645144, 0)
 TimerMenu.Size = UDim2.new(0.27889207, 0, 0.179966047, 0)
 TimerMenu.Visible = false
 
-UICorner_16.Parent = TimerMenu
+UICorner_17.Parent = TimerMenu
 
 TimerText_2.Name = "TimerText"
 TimerText_2.Parent = TimerMenu
@@ -362,7 +388,7 @@ TimerText_2.Text = ""
 TimerText_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TimerText_2.TextSize = 14.000
 
-UICorner_17.Parent = TimerText_2
+UICorner_18.Parent = TimerText_2
 
 RunTimer.Name = "RunTimer"
 RunTimer.Parent = TimerMenu
@@ -379,7 +405,81 @@ RunTimer.TextScaled = true
 RunTimer.TextSize = 14.000
 RunTimer.TextWrapped = true
 
-UICorner_18.Parent = RunTimer
+UICorner_19.Parent = RunTimer
+
+GearFrame.Name = "GearFrame"
+GearFrame.Parent = Hackui
+GearFrame.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+GearFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GearFrame.BorderSizePixel = 0
+GearFrame.Position = UDim2.new(0.424770653, 0, 0.191850588, 0)
+GearFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
+GearFrame.Visible = false
+
+UICorner_20.Parent = GearFrame
+
+Gearholder.Name = "Gearholder"
+Gearholder.Parent = GearFrame
+Gearholder.Active = true
+Gearholder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gearholder.BackgroundTransparency = 1.000
+Gearholder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gearholder.BorderSizePixel = 0
+Gearholder.Size = UDim2.new(1, 0, 1, 0)
+
+Gear.Name = "Gear"
+Gear.Parent = Gearholder
+Gear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gear.BackgroundTransparency = 1.000
+Gear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gear.BorderSizePixel = 0
+Gear.Position = UDim2.new(0, 0, 0.312827677, 0)
+Gear.Size = UDim2.new(1, 0, 0.0848896429, 0)
+Gear.Font = Enum.Font.SourceSans
+Gear.Text = "Red hyper laser"
+Gear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gear.TextScaled = true
+Gear.TextSize = 14.000
+Gear.TextWrapped = true
+
+UICorner_21.Parent = Gear
+
+UIListLayout_2.Parent = Gearholder
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+Gear_2.Name = "Gear"
+Gear_2.Parent = Gearholder
+Gear_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gear_2.BackgroundTransparency = 1.000
+Gear_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gear_2.BorderSizePixel = 0
+Gear_2.Position = UDim2.new(0, 0, 0.312827677, 0)
+Gear_2.Size = UDim2.new(1, 0, 0.0848896429, 0)
+Gear_2.Font = Enum.Font.SourceSans
+Gear_2.Text = "Sword of the Epicredness"
+Gear_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gear_2.TextScaled = true
+Gear_2.TextSize = 14.000
+Gear_2.TextWrapped = true
+
+UICorner_22.Parent = Gear_2
+
+Gear_3.Name = "Gear"
+Gear_3.Parent = Gearholder
+Gear_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gear_3.BackgroundTransparency = 1.000
+Gear_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gear_3.BorderSizePixel = 0
+Gear_3.Position = UDim2.new(0, 0, 0.312827677, 0)
+Gear_3.Size = UDim2.new(1, 0, 0.0848896429, 0)
+Gear_3.Font = Enum.Font.SourceSans
+Gear_3.Text = "Deluxe Rainbow Magic Carpet"
+Gear_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gear_3.TextScaled = true
+Gear_3.TextSize = 14.000
+Gear_3.TextWrapped = true
+
+UICorner_23.Parent = Gear_3
 
 Music:SetAttribute("id", 142376088)
 Music_2:SetAttribute("id", 1837768745)
@@ -404,6 +504,25 @@ end)
 
 TimerButton.MouseButton1Click:Connect(function()
 	TimerMenu.Visible = true
+end)
+
+Gears.MouseButton1Click:Connect(function()
+	GearFrame.Visible = true
+end)
+
+Gear.MouseButton1Click:Connect(function()
+	GearFrame.Visible = false
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";gear me 212296936") end end
+end)
+
+Gear_2.MouseButton1Click:Connect(function()
+	GearFrame.Visible = false
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";gear me 409745306") end end
+end)
+
+Gear_3.MouseButton1Click:Connect(function()
+	GearFrame.Visible = false
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";gear me 477910063") end end
 end)
 
 RunTimer.MouseButton1Click:Connect(function()
@@ -512,7 +631,7 @@ SRC.MouseButton1Click:Connect(function()
 		elseif math.random(1,10) == 10 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give all b") end end
 		end
-			tast.wait(0.5)
+		tast.wait(0.5)
 	end
 end)
 
