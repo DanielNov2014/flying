@@ -63,7 +63,7 @@ local Gear_3 = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
 
 --Properties:
-
+Instance.new("UIDragDetector", Timer)
 Hackui.Name = "Hackui"
 Hackui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Hackui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
