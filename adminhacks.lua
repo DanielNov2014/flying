@@ -57,7 +57,7 @@ local Gear_2 = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
 local Gear_3 = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
-
+Instance.new("UIDragDetector", Hackui)
 --Properties:
 
 Hackui.Name = "Hackui"
