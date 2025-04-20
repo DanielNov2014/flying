@@ -525,7 +525,7 @@ end)
 DS.MouseButton1Click:Connect(function()
 	timer(5)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh TEAM EVON HAS TAKEN OVER THE SERVER!") end end
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";clone all ;clone all ;clone all ;clone all ;clone all ;clone all ;poop all ;clone all ;re all") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopwarp all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";blur all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";time 24") end end
