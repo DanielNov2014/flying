@@ -512,6 +512,7 @@ SRC.MouseButton1Click:Connect(function()
 		elseif math.random(1,10) == 10 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give all b") end end
 		end
+			tast.wait(0.5)
 	end
 end)
 
