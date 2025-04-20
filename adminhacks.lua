@@ -1100,7 +1100,9 @@ DS.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh TEAM EVON HAS TAKEN OVER THE SERVER!") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
-	TBAGNK_fake_script()
+	task.spawn(function()
+		TBAGNK_fake_script()
+	end)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopwarp all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";blur all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";time 24") end end
