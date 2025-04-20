@@ -490,17 +490,27 @@ end)
 
 SRC.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";notice all running random commands") end end
-	for i = 10,0,-1 do
-		if math.random(1,5) == 1 then
+	for i = 20,0,-1 do
+		if math.random(1,10) == 1 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";re all") end end
-		elseif math.random(1,5) == 2 then
-			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh random command test") end end
-		elseif math.random(1,5) == 3 then
+		elseif math.random(1,10) == 2 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh EVON join today!") end end
+		elseif math.random(1,10) == 3 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";pm all hello this was a random command") end end
-		elseif math.random(1,5) == 4 then
+		elseif math.random(1,10) == 4 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";hole all") end end
-		elseif math.random(1,5) == 5 then
+		elseif math.random(1,10) == 5 then
 			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";permrank random Ban") end end
+		elseif math.random(1,10) == 6 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";servermessage EVON join today!") end end
+		elseif math.random(1,10) == 7 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";warp all") end end
+		elseif math.random(1,10) == 8 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";noclip2 all") end end
+		elseif math.random(1,10) == 9 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give all b") end end
+		elseif math.random(1,10) == 10 then
+			for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give all b") end end
 		end
 	end
 end)
