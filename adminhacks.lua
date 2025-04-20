@@ -1259,4 +1259,4 @@ PM.MouseButton1Click:Connect(function()
 end)
 
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/spamdecals.lua"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/adminhacks.lua"))()
