@@ -64,7 +64,7 @@ local UICorner_24 = Instance.new("UICorner")
 
 Hackui.Name = "Hackui"
 Hackui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Hackui.Enabled = false
+Hackui.Enabled = true
 Hackui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Hackui.ResetOnSpawn = false
 
