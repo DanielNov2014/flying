@@ -525,31 +525,30 @@ end)
 DS.MouseButton1Click:Connect(function()
 	timer(5)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";sh TEAM EVON HAS TAKEN OVER THE SERVER!") end end
-	tast.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopwarp all") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";blur all") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 10418150898048") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";disco") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";jail all ;ice all ;lockmap") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";fat all") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";speed all 0") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";alert all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";cmdbar all ;cmdbar2 all") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";servermessage TEAM EVON HAS TAKEN OVER THE SERVER!") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";name all TEAM EVON!") end end
-	tast.wait(1)
+	task.wait(1)
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";titler all TEAM EVON HAS TAKEN OVER THE SERVER!") end end
-	tast.wait(1)
+	task.wait(1)
 end)
 
 TimerButton.MouseButton1Click:Connect(function()
