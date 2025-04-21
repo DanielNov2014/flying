@@ -248,33 +248,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 		_(args)
 	end
 
-	function spam(id)
-		for i,v in game.workspace:GetDescendants() do
-			if v:IsA("BasePart") then
-				spawn(function()
-					SetLocked(v,false)
-					SpawnDecal(v,Enum.NormalId.Front)
-					AddDecal(v,id,Enum.NormalId.Front)
 
-					SpawnDecal(v,Enum.NormalId.Back)
-					AddDecal(v,id,Enum.NormalId.Back)
-
-					SpawnDecal(v,Enum.NormalId.Right)
-					AddDecal(v,id,Enum.NormalId.Right)
-
-					SpawnDecal(v,Enum.NormalId.Left)
-					AddDecal(v,id,Enum.NormalId.Left)
-
-					SpawnDecal(v,Enum.NormalId.Bottom)
-					AddDecal(v,id,Enum.NormalId.Bottom)
-
-					SpawnDecal(v,Enum.NormalId.Top)
-					AddDecal(v,id,Enum.NormalId.Top)
-				end)
-			end
-		end 
-	end
-	spam("106819842627724")  
 	wait(5)
 	local player = game.Players.LocalPlayer
 	local char = player.Character
