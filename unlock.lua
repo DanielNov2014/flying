@@ -498,6 +498,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 		CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
 		for i,v in game.Workspace:GetDescendants() do
 			if v:IsA("BasePart") then
+				print(v.Name)
 				SetLocked(v,true)
 			end
 		end
