@@ -526,8 +526,10 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 				if v:IsA("BasePart")  then
 					--spawn(function()
 					SetLocked(v,true)
+					
 				end
 			end
 		end
 		-----------------------------------
+		sky(123)
 end
