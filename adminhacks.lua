@@ -537,55 +537,12 @@ local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
 
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 4)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.471681416, 0, 0.355932206, 0)
-Frame.Size = UDim2.new(0, 192, 0, 181)
-Frame.Active = true
-Frame.Draggable = true
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 4)
-TextLabel.BorderSizePixel = 3
-TextLabel.Size = UDim2.new(0, 192, 0, 30)
-TextLabel.Font = Enum.Font.TitilliumWeb
-TextLabel.Text = "MARIO.EXE F3X"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderColor3 = Color3.fromRGB(255, 0, 4)
-TextButton.BorderSizePixel = 2
-TextButton.Position = UDim2.new(0.046875, 0, 0.248618782, 0)
-TextButton.Size = UDim2.new(0, 174, 0, 121)
-TextButton.Font = Enum.Font.TitilliumWeb
-TextButton.Text = "Execute!"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextSize = 51.000
-TextButton.TextWrapped = true
 
 -- Scripts:
 
 local function TBAGNK_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	script.Parent.MouseButton1Down:Connect(function()
-		wait(0.1)
-		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";music 1332644289 ;pitch 0.80 ;volume 3")
-		wait(3)
-		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";music 2496367477 ;volume inf")
 	--rrrg
 		    local player = game.Players.LocalPlayer
 			local char = player.Character
@@ -1128,9 +1085,8 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 			Sky("139345933010644")
 	
 			-----------------------------------
-	end)
 end
-coroutine.wrap(TBAGNK_fake_script)()
+--coroutine.wrap(TBAGNK_fake_script)()
 
 
 AT.MouseButton1Click:Connect(function()
