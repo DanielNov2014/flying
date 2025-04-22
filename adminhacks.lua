@@ -1103,7 +1103,7 @@ DS.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
 	TBAGNK_fake_script()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";titler all TEAM EVON HAS TAKEN OVER!") end end
-	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";jail all ;ice all ;lockmap ;disco ;loopwarp all ;") end end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";jail all ;ice all ;lockmap ;disco ;loopwarp all ;music 129978203916047 ;pitch 0.22 ;volume 100") end end
 end)
 
 AT.MouseButton1Click:Connect(function()
