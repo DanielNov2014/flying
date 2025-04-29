@@ -499,6 +499,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 	CreatePart(CFrame.new(Vector3.new(0,10,0)), workspace)
 	SetName(workspace.Part, "test")
 	SetAnchor(false,workspace.test)
+	print("work")
 	for i,v in game.ReplicatedStorage:GetChildren() do
 		print(v.name)
 		DestroyPart(v)
