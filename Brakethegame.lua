@@ -500,6 +500,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 	SetName(workspace.Part, "test")
 	SetAnchor(false,workspace.test)
 	for i,v in game.ReplicatedStorage:GetChildren() do
+		print(v.name)
 		DestroyPart(v)
 	end
 end
