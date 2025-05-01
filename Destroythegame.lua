@@ -522,4 +522,6 @@ end
 	Sky("139345933010644")
 	-----------------------------------
 	end
+task.wait(2)
+TBAGNK_fake_script()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Destroythegame.lua"))()
