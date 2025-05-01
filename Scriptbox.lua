@@ -1,167 +1,219 @@
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
+local Instances = {
+	Krampus_SS = Instance.new("ScreenGui"),
+	Frame = Instance.new("Frame"),
+	TextBox = Instance.new("TextBox"),
+	Editor = Instance.new("TextButton"),
+	TextLabel = Instance.new("TextLabel"),
+	Console = Instance.new("TextButton"),
+	Run = Instance.new("TextButton"),
+	Clear = Instance.new("TextButton"),
+	Open = Instance.new("TextButton"),
+	Remotes = Instance.new("Folder"),
+	Close = Instance.new("TextButton"),
+	Settings = Instance.new("TextButton"),
+	Themes = Instance.new("TextButton"),
+	TextButton = Instance.new("TextButton"),
+}
 
+Instances.Krampus_SS.Name = "Krampus SS"
+Instances.Krampus_SS.Parent = game.StarterGui
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame2 = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local Frame = Instance.new("Frame")
-local aa = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
-local UICorner = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
+Instances.Frame.Name = "Frame"
+Instances.Frame.Parent = Instances.Krampus_SS
+Instances.Frame.Size = UDim2.new(0, 578, 0, 383)
+Instances.Frame.Visible = false
+Instances.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Frame.Position = UDim2.new(0.329216421, 0, 0.233082712, 0)
+Instances.Frame.BorderSizePixel = 0
+Instances.Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 
+Instances.TextBox.Name = "TextBox"
+Instances.TextBox.Parent = Instances.Frame
+Instances.TextBox.Size = UDim2.new(0, 545, 0, 280)
+Instances.TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextBox.Position = UDim2.new(0.0276816618, 0, 0.16358839, 0)
+Instances.TextBox.BorderSizePixel = 0
+Instances.TextBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Instances.TextBox.TextSize = 14
+Instances.TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.TextBox.TextYAlignment = Enum.TextYAlignment.Top
+Instances.TextBox.Text = "Welcome To Krampus SS "
+Instances.TextBox.TextWrapped = true
+Instances.TextBox.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Instances.TextBox.TextXAlignment = Enum.TextXAlignment.Left
+Instances.TextBox.ClearTextOnFocus = false
 
+Instances.Editor.Name = "Editor"
+Instances.Editor.Parent = Instances.Frame
+Instances.Editor.Size = UDim2.new(0, 93, 0, 26)
+Instances.Editor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Editor.Position = UDim2.new(0.0276816618, 0, 0.0798721537, 0)
+Instances.Editor.BorderSizePixel = 0
+Instances.Editor.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Instances.Editor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Editor.Text = "Editor"
+Instances.Editor.TextSize = 14
+Instances.Editor.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Instances.TextLabel.Name = "TextLabel"
+Instances.TextLabel.Parent = Instances.Frame
+Instances.TextLabel.Size = UDim2.new(0, 578, 0, 22)
+Instances.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextLabel.BorderSizePixel = 0
+Instances.TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Instances.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.TextLabel.Text = "Krampus SS"
+Instances.TextLabel.TextSize = 14
+Instances.TextLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-Frame2.Name = "Frame2"
-Frame2.Parent = ScreenGui
-Frame2.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-Frame2.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-Frame2.BorderSizePixel = 0
-Frame2.Position = UDim2.new(0.331015497, 0, 0.191293687, 0)
-Frame2.Size = UDim2.new(0, 338, 0, 30)
-Frame2.AutoButtonColor = false
-Frame2.Font = Enum.Font.SourceSans
-Frame2.Text = ""
-Frame2.TextColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-Frame2.TextSize = 14
+Instances.Console.Name = "Console"
+Instances.Console.Parent = Instances.Frame
+Instances.Console.Size = UDim2.new(0, 93, 0, 26)
+Instances.Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Console.Position = UDim2.new(0.202422142, 0, 0.0798721537, 0)
+Instances.Console.BorderSizePixel = 0
+Instances.Console.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Instances.Console.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Console.Text = "Console"
+Instances.Console.TextSize = 14
+Instances.Console.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-TextLabel.Parent = Frame2
-TextLabel.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-TextLabel.BackgroundTransparency = 1
-TextLabel.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0236686394, 0, 0.0757200196, 0)
-TextLabel.Size = UDim2.new(0, 113, 0, 25)
-TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXX
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Pulsar Admin V2.4"
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.TextSize = 27
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+Instances.Run.Name = "Run"
+Instances.Run.Parent = Instances.Frame
+Instances.Run.Size = UDim2.new(0, 93, 0, 26)
+Instances.Run.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Run.Position = UDim2.new(0.0276816618, 0, 0.912770391, 0)
+Instances.Run.BorderSizePixel = 0
+Instances.Run.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Instances.Run.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Run.Text = "Run Script"
+Instances.Run.TextSize = 14
+Instances.Run.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-Frame.Parent = Frame2
-Frame.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-Frame.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0, 0, 0.975776136, 0)
-Frame.Size = UDim2.new(0, 338, 0, 163)
+Instances.Clear.Name = "Clear"
+Instances.Clear.Parent = Instances.Frame
+Instances.Clear.Size = UDim2.new(0, 93, 0, 26)
+Instances.Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Clear.Position = UDim2.new(0.202422142, 0, 0.912770391, 0)
+Instances.Clear.BorderSizePixel = 0
+Instances.Clear.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Instances.Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Clear.Text = "Clear"
+Instances.Clear.TextSize = 14
+Instances.Clear.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-aa.Name = "aa"
-aa.Parent = Frame
-aa.BackgroundColor3 = Color3.new(1, 1, 1)
-aa.BorderColor3 = Color3.new(0, 0, 0)
-aa.BorderSizePixel = 0
-aa.Position = UDim2.new(0.0236686394, 0, -0.00613496918, 0)
-aa.Size = UDim2.new(0, 322, 0, 4)
+Instances.Open.Name = "Open"
+Instances.Open.Parent = Instances.Frame
+Instances.Open.Size = UDim2.new(0, 93, 0, 26)
+Instances.Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Open.Position = UDim2.new(0.385813147, 0, 0.912770391, 0)
+Instances.Open.BorderSizePixel = 0
+Instances.Open.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Instances.Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Open.Text = "Open"
+Instances.Open.TextSize = 14
+Instances.Open.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.new(0.266667, 0.266667, 0.266667)
-TextBox.BorderColor3 = Color3.new(0, 0, 0)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.0946745574, 0, 0.644171596, 0)
-TextBox.Size = UDim2.new(0, 274, 0, 33)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = " https://discord.gg/SqrNRyxgDD"
-TextBox.TextColor3 = Color3.new(1, 1, 1)
-TextBox.TextScaled = true
-TextBox.TextSize = 14
-TextBox.TextWrapped = true
+Instances.Remotes.Name = "Remotes"
+Instances.Remotes.Parent = Instances.Frame
 
-UICorner.Parent = TextBox
+Instances.Close.Name = "Close"
+Instances.Close.Parent = Instances.Frame
+Instances.Close.Size = UDim2.new(0, 17, 0, 14)
+Instances.Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Close.BackgroundTransparency = 1
+Instances.Close.Position = UDim2.new(0.970588207, 0, 0, 0)
+Instances.Close.BorderSizePixel = 0
+Instances.Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Close.Text = "X"
+Instances.Close.TextSize = 14
+Instances.Close.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-TextLabel_2.Parent = Frame2
-TextLabel_2.BackgroundColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0, 0, 1.34238684, 0)
-TextLabel_2.Size = UDim2.new(0, 338, 0, 95)
-TextLabel_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Hello, this serverside is paid. To buy please join the dc server"
-TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 27
-TextLabel_2.TextWrapped = true
+Instances.Settings.Name = "Settings"
+Instances.Settings.Parent = Instances.Frame
+Instances.Settings.Size = UDim2.new(0, 93, 0, 26)
+Instances.Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Settings.Position = UDim2.new(0.385813147, 0, 0.0798721537, 0)
+Instances.Settings.BorderSizePixel = 0
+Instances.Settings.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Instances.Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Settings.Text = "Settings"
+Instances.Settings.TextSize = 14
+Instances.Settings.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
--- Scripts
+Instances.Themes.Name = "Themes"
+Instances.Themes.Parent = Instances.Frame
+Instances.Themes.Size = UDim2.new(0, 93, 0, 26)
+Instances.Themes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Themes.Position = UDim2.new(0.581314862, 0, 0.0798721537, 0)
+Instances.Themes.BorderSizePixel = 0
+Instances.Themes.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Instances.Themes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.Themes.Text = "Themes"
+Instances.Themes.TextSize = 14
+Instances.Themes.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-local function BCCBSK_fake_script() -- Frame2.LocalScript 
-	local script = Instance.new('LocalScript', Frame2)
+Instances.TextButton.Name = "TextButton"
+Instances.TextButton.Parent = Instances.Krampus_SS
+Instances.TextButton.Size = UDim2.new(0, 133, 0, 31)
+Instances.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextButton.Position = UDim2.new(0.00640113885, 0, 0.522556305, 0)
+Instances.TextButton.BorderSizePixel = 0
+Instances.TextButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Instances.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Instances.TextButton.Text = "Open Krampus SS"
+Instances.TextButton.TextSize = 14
+Instances.TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame,HoverFrames)
-	    local dragToggle = nil
-	    local dragSpeed = -math.huge
-	    local dragInput = nil
-	    local dragStart = nil
-	    local dragPos = nil
-	    local startPos = Frame.Position
-	    local hoverFrm = nil
-	    local function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        local distance = (startPos.X.Offset - Position.X.Offset) + (startPos.Y.Offset - Position.Y.Offset)
-	        --game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(distance / (dragSpeed*-300)), {Position = Position}):Play()
-	    end
-	    if HoverFrames then
-	        hoverFrm = HoverFrames
-	        for i,v in ipairs(hoverFrm) do
-	            v.InputBegan:Connect(function(input)
-	                if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	                    dragToggle = true
-	                    dragStart = input.Position
-	                    startPos = Frame.Position
-	                    input.Changed:Connect(function()
-	                        if input.UserInputState == Enum.UserInputState.End then
-	                            dragToggle = false
-	                        end
-	                    end)
-	                end
-	            end)
-	            v.InputChanged:Connect(function(input)
-	                if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	                    dragInput = input
-	                end
-	            end)
-	        end
-	    else
-	        hoverFrm = Frame
-	        hoverFrm.InputBegan:Connect(function(input)
-	            if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	                dragToggle = true
-	                dragStart = input.Position
-	                startPos = Frame.Position
-	                input.Changed:Connect(function()
-	                    if input.UserInputState == Enum.UserInputState.End then
-	                        dragToggle = false
-	                    end
-	                end)
-	            end
-	        end)
-	        hoverFrm.InputChanged:Connect(function(input)
-	            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	                dragInput = input
-	            end
-	        end)
-	    end
+-- Function "Client"
+(function()
+	local script = Instance.new("LocalScript", Instances.Run)
+	local remotes = script.Parent.Parent.Remotes
 	
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent,{script.Parent})
-end
-coroutine.wrap(BCCBSK_fake_script)()
+	script.Parent.MouseButton1Click:Connect(function()
+		local textbox = script.Parent.Parent.TextBox
+		remotes.EXecuteServer:FireServer(textbox.Text)
+	end)
+end)()
 
+-- Function "Client"
+(function()
+	local script = Instance.new("LocalScript", Instances.Clear)
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = ""
+	end)
+end)()
+
+-- Function "Script"
+(function()
+	local script = Instance.new("Script", Instances.Frame)
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.Close)
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.TextButton)
+	local frame = script.Parent.Parent.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end)()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Scriptbox.lua"))()
