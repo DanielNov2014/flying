@@ -521,6 +521,33 @@ end
 	end
 	Sky("139345933010644")
 	-----------------------------------
+		function spam(id)
+		for i,v in game.workspace:GetDescendants() do
+			if v:IsA("BasePart") then
+				spawn(function()
+					SetLocked(v,false)
+					SpawnDecal(v,Enum.NormalId.Front)
+					AddDecal(v,id,Enum.NormalId.Front)
+
+					SpawnDecal(v,Enum.NormalId.Back)
+					AddDecal(v,id,Enum.NormalId.Back)
+
+					SpawnDecal(v,Enum.NormalId.Right)
+					AddDecal(v,id,Enum.NormalId.Right)
+
+					SpawnDecal(v,Enum.NormalId.Left)
+					AddDecal(v,id,Enum.NormalId.Left)
+
+					SpawnDecal(v,Enum.NormalId.Bottom)
+					AddDecal(v,id,Enum.NormalId.Bottom)
+
+					SpawnDecal(v,Enum.NormalId.Top)
+					AddDecal(v,id,Enum.NormalId.Top)
+				end)
+			end
+		end 
+	end
+	spam("139345933010644")  
 	end
 task.wait(2)
 TBAGNK_fake_script()
