@@ -2,8 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-local Balls = 1
-local Parts = 1
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local PosBox = Instance.new("TextBox")
@@ -12,14 +11,18 @@ local Part = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local NameBox = Instance.new("TextBox")
 local UICorner_3 = Instance.new("UICorner")
-local Name = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
 local Ball = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local AT = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local AF = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local E = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
+local ExploreUI = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Button = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
 
 --Properties:
 
@@ -79,20 +82,6 @@ NameBox.TextSize = 14.000
 
 UICorner_3.Parent = NameBox
 
---Name.Name = "Name"
---Name.Parent = Frame
---Name.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
---Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
---Name.BorderSizePixel = 0
---Name.Position = UDim2.new(0, 0, 0.496291369, 0)
---Name.Size = UDim2.new(1, 0, 0.0831918493, 0)
---Name.Font = Enum.Font.SourceSans
---Name.Text = "Set name"
---Name.TextColor3 = Color3.fromRGB(0, 0, 0)
---Name.TextSize = 14.000
-
-UICorner_4.Parent = Name
-
 Ball.Name = "Ball"
 Ball.Parent = Frame
 Ball.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
@@ -105,7 +94,7 @@ Ball.Text = "Create a ball"
 Ball.TextColor3 = Color3.fromRGB(0, 0, 0)
 Ball.TextSize = 14.000
 
-UICorner_5.Parent = Ball
+UICorner_4.Parent = Ball
 
 AT.Name = "AT"
 AT.Parent = Frame
@@ -119,7 +108,7 @@ AT.Text = "Anchor (True)"
 AT.TextColor3 = Color3.fromRGB(0, 0, 0)
 AT.TextSize = 14.000
 
-UICorner_6.Parent = AT
+UICorner_5.Parent = AT
 
 AF.Name = "AF"
 AF.Parent = Frame
@@ -133,9 +122,49 @@ AF.Text = "Anchor (False)"
 AF.TextColor3 = Color3.fromRGB(0, 0, 0)
 AF.TextSize = 14.000
 
-UICorner_7.Parent = AF
+UICorner_6.Parent = AF
 
-local function TBAGNK_fake_script(Part:BoolValue, Name:BoolValue, Pos:string, name:string, Anchor:BoolValue, Anchorvalue:BoolValue, part:Part, ball:BoolValue) -- TextButton.LocalScript 
+E.Name = "E"
+E.Parent = Frame
+E.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+E.BorderColor3 = Color3.fromRGB(0, 0, 0)
+E.BorderSizePixel = 0
+E.Position = UDim2.new(0, 0, 0.516664863, 0)
+E.Size = UDim2.new(1, 0, 0.0831918493, 0)
+E.Font = Enum.Font.SourceSans
+E.Text = "Explore"
+E.TextColor3 = Color3.fromRGB(0, 0, 0)
+E.TextSize = 14.000
+
+UICorner_7.Parent = E
+
+ExploreUI.Name = "ExploreUI"
+ExploreUI.Parent = ScreenGui
+ExploreUI.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+ExploreUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExploreUI.BorderSizePixel = 0
+ExploreUI.Position = UDim2.new(0.483767211, 0, 0.178268254, 0)
+ExploreUI.Size = UDim2.new(0.248560458, 0, 0.642301559, 0)
+ExploreUI.Visible = false
+ExploreUI.CanvasSize = UDim2.new(ExploreUI.CanvasSize.X.Scale, 0, 20, 0)
+
+UIListLayout.Parent = ExploreUI
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Button.Name = "Button"
+Button.Parent = ExploreUI
+Button.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Size = UDim2.new(1, 0, 0.002, 0)
+Button.Font = Enum.Font.SourceSans
+Button.Text = "Explore"
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+UICorner_8.Parent = Button
+
+local function TBAGNK_fake_script(Part:BoolValue, Name:BoolValue, Pos:string, name:string, Anchor:BoolValue, Anchorvalue:BoolValue, part:Part, ball:BoolValue, des:BoolValue) -- TextButton.LocalScript 
 
 
 
@@ -652,6 +681,8 @@ local function TBAGNK_fake_script(Part:BoolValue, Name:BoolValue, Pos:string, na
 		SetName(workspace.Part, "Part"..Parts)
 		tempart:Destroy()
 		Parts += 1
+	elseif des == true then
+		DestroyPart(part)
 	elseif Anchor == true then
 		SetAnchor(Anchorvalue, part)
 	elseif ball == true then
@@ -698,11 +729,36 @@ local function TBAGNK_fake_script(Part:BoolValue, Name:BoolValue, Pos:string, na
 	end
 end
 
+for i,v in workspace:GetDescendants() do
+	local clone = Button:Clone()
+	clone.Text = v.Name
+	clone:SetAttribute("Part", v.Name)
+	clone.Parent = ExploreUI
+	clone.Name = v.Name
+end
+
+for i,v in ExploreUI:GetChildren() do
+	if v:IsA("TextButton") then
+		v.MouseButton1Click:Connect(function()
+			for i1,v1 in workspace:GetDescendants() do
+				if v1.Name == v.Name then
+					TBAGNK_fake_script(false,false,false,false,false,false,v1,false,true)
+					v:Destroy()
+				end
+			end
+		end)
+	end
+end
+
 for i,v in Frame:GetChildren() do
 	local new = Instance.new("UIStroke", v)
 	new.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	new.Thickness = 9.3
 end
+
+E.MouseButton1Click:Connect(function()
+	ExploreUI.Visible = not ExploreUI.Visible
+end)
 
 Ball.MouseButton1Click:Connect(function()
 	task.spawn(function()
