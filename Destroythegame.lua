@@ -522,3 +522,4 @@ end
 	Sky("139345933010644")
 	-----------------------------------
 	end
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Destroythegame.lua"))()
