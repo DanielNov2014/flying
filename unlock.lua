@@ -497,16 +497,17 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 
 	function Sky()
 		for i,v in game.Workspace:GetDescendants() do
-			
-				--spawn(function()
-				SetLocked(v,false)
-				print(v.name)
-				SetAnchor(false,v)
-
+			if v:IsA("BasePart") then
+			--spawn(function()
+			SetLocked(v,false)
+			print(v.name)
+			--SetAnchor(false,v)
+			end
 		end
 	end
 	-----------------------------------
 	Sky()
 end
+task.wait(2)
 TBAGNK_fake_script()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/unlock.lua"))()
