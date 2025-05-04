@@ -505,7 +505,6 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 		end
 	end
 	-----------------------------------
-	sky(123)
 end
 TBAGNK_fake_script()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/unlock.lua"))()
