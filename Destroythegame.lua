@@ -552,5 +552,6 @@ end
 task.wait(2)
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
+task.wait(2)
 TBAGNK_fake_script()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Destroythegame.lua"))()
