@@ -1107,6 +1107,13 @@ DS.MouseButton1Click:Connect(function()
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
 	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
 	TBAGNK_fake_script()
+	for i,v:Instance in game.Players.LocalPlayer.PlayerGui.HDAdminInterface.MainFrame.Pages.Commands.Commands:GetDescendants() do
+	if v.name == "TextLabel" then
+		print(v.text .. " all")
+		for i1,v1 in game:GetDescendants() do if v1:IsA("RemoteFunction") and v1.Name == "RequestCommand" then v1:InvokeServer(v.text .. " all") end end
+		task.wait(0.03)
+	end
+	end
 end)
 
 AT.MouseButton1Click:Connect(function()
