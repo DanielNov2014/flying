@@ -501,6 +501,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 				--spawn(function()
 				SetLocked(v,true)
 				print(v.name)
+				SetAnchor(false,v)
 			end
 		end
 	end
