@@ -497,12 +497,12 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 
 	function Sky()
 		for i,v in game.Workspace:GetDescendants() do
-			if v:IsA("BasePart")  then
+			
 				--spawn(function()
-				SetLocked(v,true)
+				SetLocked(v,false)
 				print(v.name)
 				SetAnchor(false,v)
-			end
+
 		end
 	end
 	-----------------------------------
