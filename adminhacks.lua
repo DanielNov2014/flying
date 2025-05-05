@@ -62,6 +62,7 @@ local UICorner_24 = Instance.new("UICorner")
 local Gear_3 = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Intro.lua"))()
 --Properties:
 Instance.new("UIDragDetector", Timer)
 Hackui.Name = "Hackui"
