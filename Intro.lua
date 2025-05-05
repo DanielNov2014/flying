@@ -16,6 +16,7 @@ Intro.Name = "Intro"
 Intro.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Intro.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Intro.IgnoreGuiInset = true
+Intro.ResetOnSpawn = false
 
 Frame.Parent = Intro
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
