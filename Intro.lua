@@ -2,8 +2,9 @@
 -- Version: 3.2
 
 -- Instances:
-local sound = Instance.new("Sound", script)
-sound.SoundId = 9120299677
+local sound = Instance.new("Sound", game.Players.LocalPlayer.PlayerGui)
+sound.SoundId = "rbxassetid://9120299677"
+sound.Volume = 1
 local count = 1
 local Intro = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -43,7 +44,7 @@ local function typeText(text)
 		Text.Text = string.sub(text, 1, count)
 		print(string.sub(text, 1, count))
 		local clone = sound:Clone()
-		clone.Parent = script
+		clone.Parent = game.Players.LocalPlayer.PlayerGui
 		clone:Play()
 		task.delay(0.6, function()
 			clone:Destroy()
@@ -67,4 +68,3 @@ game.TweenService:Create(Frame, TweenInfo.new(2, Enum.EasingStyle.Linear), {Back
 task.wait(2)
 Intro:Destroy()
 script:Destroy()
---loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Intro.lua"))()
