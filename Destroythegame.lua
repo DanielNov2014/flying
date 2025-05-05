@@ -549,6 +549,7 @@ end
 	end
 	spam("139345933010644")  
 	end
+end
 task.wait(2)
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";give me b") end end
