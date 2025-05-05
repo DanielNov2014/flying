@@ -3,7 +3,7 @@
 
 -- Instances:
 local sound = Instance.new("Sound", script)
-sound.SoundId = "rbxassetid://9120299677"
+sound.SoundId = 9120299677
 local count = 1
 local Intro = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
