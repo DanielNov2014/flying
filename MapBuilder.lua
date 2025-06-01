@@ -761,27 +761,7 @@ Simplemap.MouseButton1Click:Connect(function()
 			break
 		end
 	end
-	function Sky(id)
-		e = char.HumanoidRootPart.CFrame.x
-		f = char.HumanoidRootPart.CFrame.y
-		g = char.HumanoidRootPart.CFrame.z
-		CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
-		for i,v in game.Workspace:GetDescendants() do
-			if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
-				--spawn(function()
-				SetName(v,"Sky")
-				AddMesh(v)
-				--end)
-				--spawn(function()
-				SetMesh(v,"111891702759441")
-				SetTexture(v,id)
-				--end)
-				MeshResize(v,Vector3.new(9000,9000,9000))
-				SetLocked(v,true)
-			end
-		end
-	end
-	Sky("139345933010644")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Sky.lua"))()
 	task.wait(2)
 	for i,v in workspace:GetChildren() do
 		if v:IsA("Model") == false then
@@ -831,27 +811,7 @@ Simplemap_2.MouseButton1Click:Connect(function()
 			break
 		end
 	end
-	function Sky(id)
-		e = char.HumanoidRootPart.CFrame.x
-		f = char.HumanoidRootPart.CFrame.y
-		g = char.HumanoidRootPart.CFrame.z
-		CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
-		for i,v in game.Workspace:GetDescendants() do
-			if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
-				--spawn(function()
-				SetName(v,"Sky")
-				AddMesh(v)
-				--end)
-				--spawn(function()
-				SetMesh(v,"111891702759441")
-				SetTexture(v,id)
-				--end)
-				MeshResize(v,Vector3.new(9000,9000,9000))
-				SetLocked(v,true)
-			end
-		end
-	end
-	Sky("139345933010644")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Sky.lua"))()
 	xpos = 0
 	zpos = 0
 	for i = 50*50,0,-1 do
