@@ -17,7 +17,7 @@ local Simplemap = Instance.new("TextButton")
 local Simplemap_2 = Instance.new("TextButton")
 local sound = Instance.new("Sound")
 
---Properties:
+--Properties: 
 
 Mapbuilder.Name = "Map builder"
 Mapbuilder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
