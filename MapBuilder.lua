@@ -19,6 +19,7 @@ local sound = Instance.new("Sound")
 --Properties:
 
 Mapbuilder.Name = "Map builder"
+Mapbuilder.ResetOnSpawn = false
 Mapbuilder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Mapbuilder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
