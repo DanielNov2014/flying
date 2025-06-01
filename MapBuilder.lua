@@ -12,9 +12,9 @@ local Guibuilding_2 = Instance.new("TextLabel")
 local Frame = Instance.new("Frame")
 local Text = Instance.new("TextLabel")
 local UPD1 = Instance.new("TextLabel")
-local UPD2 = Instance.new("TextLabel")
 local Menu = Instance.new("Frame")
 local Simplemap = Instance.new("TextButton")
+local Simplemap_2 = Instance.new("TextButton")
 local sound = Instance.new("Sound")
 
 --Properties:
@@ -130,21 +130,6 @@ UPD1.TextScaled = true
 UPD1.TextSize = 14.000
 UPD1.TextWrapped = true
 
-UPD2.Name = "UPD 1"
-UPD2.Parent = Frame
-UPD2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UPD2.BackgroundTransparency = 1.000
-UPD2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-UPD2.BorderSizePixel = 0
-UPD2.Position = UDim2.new(0.103845812, 0, 0.3, 0)
-UPD2.Size = UDim2.new(0.893442631, 0, 0.0714285746, 0)
-UPD2.Font = Enum.Font.SourceSans
-UPD2.Text = "UPD 2: made it so you can only see your map"
-UPD2.TextColor3 = Color3.fromRGB(255, 255, 255)
-UPD2.TextScaled = true
-UPD2.TextSize = 14.000
-UPD2.TextWrapped = true
-
 Menu.Name = "Menu"
 Menu.Parent = Mapbuilder
 Menu.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
@@ -167,6 +152,20 @@ Simplemap.TextColor3 = Color3.fromRGB(0, 0, 0)
 Simplemap.TextScaled = true
 Simplemap.TextSize = 14.000
 Simplemap.TextWrapped = true
+
+Simplemap_2.Name = "Simple map"
+Simplemap_2.Parent = Menu
+Simplemap_2.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Simplemap_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Simplemap_2.BorderSizePixel = 0
+Simplemap_2.Position = UDim2.new(-0.00303823594, 0, 0.0930965319, 0)
+Simplemap_2.Size = UDim2.new(1, 0, 0.0938086286, 0)
+Simplemap_2.Font = Enum.Font.SourceSans
+Simplemap_2.Text = "Build blue2spooky map (simple version)"
+Simplemap_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Simplemap_2.TextScaled = true
+Simplemap_2.TextSize = 14.000
+Simplemap_2.TextWrapped = true
 
 sound.SoundId = "rbxassetid://3997124966"
 sound.Volume = 1
@@ -731,6 +730,9 @@ end
 
 
 Simplemap.MouseButton1Click:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 6073491164 ;volume 100") end end
+	task.wait(1.5)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 17324989076 ;volume 5") end end
 	for i,v in workspace:GetChildren() do
 		if v.Parent.Name == game.Players.LocalPlayer.Name then continue end
 		if v.Name == game.Players.LocalPlayer.Name then continue end
@@ -759,6 +761,27 @@ Simplemap.MouseButton1Click:Connect(function()
 			break
 		end
 	end
+	function Sky(id)
+		e = char.HumanoidRootPart.CFrame.x
+		f = char.HumanoidRootPart.CFrame.y
+		g = char.HumanoidRootPart.CFrame.z
+		CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
+		for i,v in game.Workspace:GetDescendants() do
+			if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
+				--spawn(function()
+				SetName(v,"Sky")
+				AddMesh(v)
+				--end)
+				--spawn(function()
+				SetMesh(v,"111891702759441")
+				SetTexture(v,id)
+				--end)
+				MeshResize(v,Vector3.new(9000,9000,9000))
+				SetLocked(v,true)
+			end
+		end
+	end
+	Sky("139345933010644")
 	task.wait(2)
 	for i,v in workspace:GetChildren() do
 		if v:IsA("Model") == false then
@@ -776,4 +799,145 @@ Simplemap.MouseButton1Click:Connect(function()
 	CreateSpawn(tempart.CFrame, workspace)
 	SetTrans(part, 1)
 	tempart:Destroy()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 6073491164 ;volume 100") end end
+	task.wait(1.5)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 77484784570543 ;volume 100 ;pitch 0.09") end end
+end)
+Simplemap_2.MouseButton1Click:Connect(function()
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 6073491164 ;volume 100") end end
+	task.wait(1.5)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 17324989076 ;volume 5") end end
+	for i,v in workspace:GetChildren() do
+		if v.Parent.Name == game.Players.LocalPlayer.Name then continue end
+		if v.Name == game.Players.LocalPlayer.Name then continue end
+		DestroyPart(v)
+	end
+	local tempart = Instance.new("Part", workspace)
+	tempart.Anchored = true
+	tempart.Position = Vector3.new(0,0,0)
+	local xpos = 0
+	local zpos = 0
+	for i = 50*50,0,-1 do
+		tempart.Position = Vector3.new(xpos,0,zpos)
+		CreatePart(tempart.CFrame, workspace)
+		local part = workspace.Part
+		SetAnchor(true, part)
+		xpos += 4
+		if xpos >= 50 then
+			xpos = 0
+			zpos += 2
+		end
+		if zpos == 20 then
+			break
+		end
+	end
+	function Sky(id)
+		e = char.HumanoidRootPart.CFrame.x
+		f = char.HumanoidRootPart.CFrame.y
+		g = char.HumanoidRootPart.CFrame.z
+		CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
+		for i,v in game.Workspace:GetDescendants() do
+			if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
+				--spawn(function()
+				SetName(v,"Sky")
+				AddMesh(v)
+				--end)
+				--spawn(function()
+				SetMesh(v,"111891702759441")
+				SetTexture(v,id)
+				--end)
+				MeshResize(v,Vector3.new(9000,9000,9000))
+				SetLocked(v,true)
+			end
+		end
+	end
+	Sky("139345933010644")
+	xpos = 0
+	zpos = 0
+	for i = 50*50,0,-1 do
+		tempart.Position = Vector3.new(xpos,0,zpos)
+		CreatePart(tempart.CFrame, workspace)
+		local part = workspace.Part
+		SetAnchor(true, part)
+		xpos -= 4
+		if xpos <= -50 then
+			xpos = 0
+			zpos += 2
+		end
+		if zpos == 20 then
+			break
+		end
+	end
+	local xpos1 = -10
+	local zpos1 = 20
+	for i = 100,0,-1 do
+		tempart.Position = Vector3.new(xpos1,0.1,zpos1)
+		CreatePart(tempart.CFrame, workspace)
+		local part = workspace.Part
+		SetAnchor(true, part)
+		zpos1 += 2
+		if xpos1 >= 24 then
+			print("done")
+			break
+		end
+		if zpos1 == 70 then
+			xpos1 += 4
+			zpos1 = 20
+		end
+	end
+	local xpos2 = -10
+	local zpos2 = -2
+	for i = 100,0,-1 do
+		tempart.Position = Vector3.new(xpos2,0.04,zpos2)
+		CreatePart(tempart.CFrame, workspace)
+		local part = workspace.Part
+		SetAnchor(true, part)
+		zpos2 -= 2
+		if xpos2 >= 24 then
+			print("done")
+			break
+		end
+		if zpos2 == -50 then
+			xpos2 += 4
+			zpos2 = -2
+		end
+	end
+	for i,v:Part in workspace:GetDescendants() do
+		if v.Parent.Name == game.Players.LocalPlayer.Name then continue end
+		if v.Name == game.Players.LocalPlayer.Name then continue end
+		if v:IsA("Model") == false and v:IsA("BasePart") then
+			if v.Position.X >= 0 then
+				if v:IsA("Model") == false and v:IsA("BasePart") then
+					if v.Position.Y == 0 then
+						Color(v, Color3.fromRGB(14, 18, 255))
+					end
+				end
+			elseif v.Position.X < 0 then
+				if v:IsA("Model") == false and v:IsA("BasePart") then
+					if v.Position.Y == 0 then
+						Color(v, Color3.fromRGB(255, 0, 0))
+					end
+				end
+			end
+		end
+	end
+	for i,v:Part in workspace:GetDescendants() do
+		if v.Parent.Name == game.Players.LocalPlayer.Name then continue end
+		if v.Name == game.Players.LocalPlayer.Name then continue end
+		if v:IsA("BasePart") then
+			print(v.Position.Y)
+			if v.Position.Y >= 0.05 then
+				if v:IsA("BasePart") then
+					Color(v, Color3.fromRGB(13, 85, 1))
+				end
+			elseif v.Position.Y >= 0.03 and v.Position.Y < 0.05 then
+				if v:IsA("BasePart") then
+					Color(v, Color3.fromRGB(255,255,0))
+				end
+			end
+		end
+	end
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 6073491164 ;volume 100") end end
+	task.wait(1.5)
+	for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";music 77484784570543 ;volume 100 ;pitch 0.09") end end
 end)
