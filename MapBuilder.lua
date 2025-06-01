@@ -12,6 +12,7 @@ local Guibuilding_2 = Instance.new("TextLabel")
 local Frame = Instance.new("Frame")
 local Text = Instance.new("TextLabel")
 local UPD1 = Instance.new("TextLabel")
+local UPD2 = Instance.new("TextLabel")
 local Menu = Instance.new("Frame")
 local Simplemap = Instance.new("TextButton")
 local sound = Instance.new("Sound")
@@ -19,7 +20,6 @@ local sound = Instance.new("Sound")
 --Properties:
 
 Mapbuilder.Name = "Map builder"
-Mapbuilder.ResetOnSpawn = false
 Mapbuilder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Mapbuilder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -129,6 +129,21 @@ UPD1.TextColor3 = Color3.fromRGB(255, 255, 255)
 UPD1.TextScaled = true
 UPD1.TextSize = 14.000
 UPD1.TextWrapped = true
+
+UPD2.Name = "UPD 1"
+UPD2.Parent = Frame
+UPD2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UPD2.BackgroundTransparency = 1.000
+UPD2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UPD2.BorderSizePixel = 0
+UPD2.Position = UDim2.new(0.103845812, 0, 0.3, 0)
+UPD2.Size = UDim2.new(0.893442631, 0, 0.0714285746, 0)
+UPD2.Font = Enum.Font.SourceSans
+UPD2.Text = "UPD 2: made it so you can only see your map"
+UPD2.TextColor3 = Color3.fromRGB(255, 255, 255)
+UPD2.TextScaled = true
+UPD2.TextSize = 14.000
+UPD2.TextWrapped = true
 
 Menu.Name = "Menu"
 Menu.Parent = Mapbuilder
@@ -717,9 +732,9 @@ end
 
 Simplemap.MouseButton1Click:Connect(function()
 	for i,v in workspace:GetChildren() do
-		if v:IsA("Model") == false then
-			DestroyPart(v)
-		end
+		if v.Parent.Name == game.Players.LocalPlayer.Name then continue end
+		if v.Name == game.Players.LocalPlayer.Name then continue end
+		DestroyPart(v)
 	end
 	local tempart = Instance.new("Part", workspace)
 	tempart.Anchored = true
@@ -762,4 +777,3 @@ Simplemap.MouseButton1Click:Connect(function()
 	SetTrans(part, 1)
 	tempart:Destroy()
 end)
---loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/MapBuilder.lua"))()
