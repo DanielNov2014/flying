@@ -180,27 +180,146 @@ if game.ReplicatedStorage:FindFirstChild("ExcuteCODE") then
 	game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer('print("this is a test")')
 	game.ReplicatedStorage.ExcuteCODE.RunCODE.OnClientEvent:Once(function(succes)
 		if succes == true then
-		sound:Play()
-		Guibuilding.TextColor3 = Color3.fromRGB(255,255,255)
-		task.wait(3)
-		sound:Play()
-		Guibuilding_2.TextColor3 = Color3.fromRGB(255,255,255)
-		task.wait(3)
-		Loader:Destroy()
-		MainUI.Visible = true
-		local UIS = Instance.new("UIStroke")
-		UIS.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		UIS.Thickness = 2.6
-		UIS.Parent = TextButton
-		TextButton.MouseButton1Click:Connect(function()
-			game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer(TextBox.Text)
-		end)
+			sound:Play()
+			Guibuilding.TextColor3 = Color3.fromRGB(255,255,255)
+			task.wait(3)
+			sound:Play()
+			Guibuilding_2.TextColor3 = Color3.fromRGB(255,255,255)
+			task.wait(3)
+			Loader:Destroy()
+			MainUI.Visible = true
+			local UIS = Instance.new("UIStroke")
+			UIS.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			UIS.Thickness = 2.6
+			UIS.Parent = TextButton
+			TextButton.MouseButton1Click:Connect(function()
+				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer(TextBox.Text)
+			end)
 		else
 			Guibuilding.TextColor3 = Color3.fromRGB(255,0,0)
-			Guibuilding.Text = "Loadstring is not atcive on the serverside cannot contiune"
+			Guibuilding.Text = "Loadstring is not atcive on the serverside loading premade menu"
 			task.wait(5)
-			Mapbuilder:Destroy()
-			script:Destroy()
+			Loader:Destroy()
+			-- Gui to Lua
+			-- Version: 3.2
+
+			-- Instances:
+
+			local Scripts = Instance.new("Frame")
+			local TextLabel = Instance.new("TextLabel")
+			local TextLabel_2 = Instance.new("TextLabel")
+			local Troll = Instance.new("TextButton")
+			local Admin = Instance.new("TextButton")
+			local CAdmin = Instance.new("TextButton")
+			local TextLabel_3 = Instance.new("TextLabel")
+
+			--Properties:
+
+			Scripts.Name = "Scripts"
+			Scripts.Parent = Mapbuilder
+			Scripts.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+			Scripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Scripts.BorderSizePixel = 0
+			Scripts.Position = UDim2.new(0.66, 0, 0.270363957, 0)
+			Scripts.Size = UDim2.new(0.34807691, 0, 0.480069309, 0)
+			Scripts.Visible = false
+
+			TextLabel.Parent = Scripts
+			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Size = UDim2.new(1, 0, 0.101083033, 0)
+			TextLabel.Font = Enum.Font.SourceSans
+			TextLabel.Text = "we are sorry that loadstring is not enabled but you can still run scripts"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextScaled = true
+			TextLabel.TextSize = 14.000
+			TextLabel.TextWrapped = true
+
+			TextLabel_2.Parent = Scripts
+			TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_2.BackgroundTransparency = 1.000
+			TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel_2.BorderSizePixel = 0
+			TextLabel_2.Position = UDim2.new(0, 0, 0.101083033, 0)
+			TextLabel_2.Size = UDim2.new(1, 0, 0.101083033, 0)
+			TextLabel_2.Font = Enum.Font.SourceSans
+			TextLabel_2.Text = "Credits: DaniBoyNov2014"
+			TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_2.TextScaled = true
+			TextLabel_2.TextSize = 14.000
+			TextLabel_2.TextWrapped = true
+
+			Troll.Name = "Troll"
+			Troll.Parent = Scripts
+			Troll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Troll.BackgroundTransparency = 1.000
+			Troll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Troll.BorderSizePixel = 0
+			Troll.Position = UDim2.new(0.0212180819, 0, 0.238267154, 0)
+			Troll.Size = UDim2.new(0.17823188, 0, 0.216606498, 0)
+			Troll.Font = Enum.Font.SourceSans
+			Troll.Text = "Run troll script"
+			Troll.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Troll.TextScaled = true
+			Troll.TextSize = 14.000
+			Troll.TextWrapped = true
+
+			Admin.Name = "Admin"
+			Admin.Parent = Scripts
+			Admin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Admin.BackgroundTransparency = 1.000
+			Admin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Admin.BorderSizePixel = 0
+			Admin.Position = UDim2.new(0.218546242, 0, 0.238267154, 0)
+			Admin.Size = UDim2.new(0.17823188, 0, 0.216606498, 0)
+			Admin.Font = Enum.Font.SourceSans
+			Admin.Text = "Run HD admin ranker (Owner)"
+			Admin.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Admin.TextScaled = true
+			Admin.TextSize = 14.000
+			Admin.TextWrapped = true
+
+			CAdmin.Name = "CAdmin"
+			CAdmin.Parent = Scripts
+			CAdmin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			CAdmin.BackgroundTransparency = 1.000
+			CAdmin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			CAdmin.BorderSizePixel = 0
+			CAdmin.Position = UDim2.new(0.426483452, 0, 0.238267154, 0)
+			CAdmin.Size = UDim2.new(0.17823188, 0, 0.216606498, 0)
+			CAdmin.Font = Enum.Font.SourceSans
+			CAdmin.Text = "Run custom admin"
+			CAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+			CAdmin.TextScaled = true
+			CAdmin.TextSize = 14.000
+			CAdmin.TextWrapped = true
+
+			TextLabel_3.Parent = Scripts
+			TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_3.BackgroundTransparency = 1.000
+			TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel_3.BorderSizePixel = 0
+			TextLabel_3.Position = UDim2.new(0.254616976, 0, 0.483754516, 0)
+			TextLabel_3.Size = UDim2.new(0.518349528, 0, 0.422382683, 0)
+			TextLabel_3.Font = Enum.Font.SourceSans
+			TextLabel_3.Text = "Commands /sh,<message> /cm /hm,title,rank,<message>"
+			TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_3.TextScaled = true
+			TextLabel_3.TextSize = 14.000
+			TextLabel_3.TextWrapped = true
+			Scripts.Visible = true
+
+			Troll.MouseButton1Click:Connect(function()
+				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("Custom made trollset")
+			end)
+			CAdmin.MouseButton1Click:Connect(function()
+				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("Custom made admin")
+			end)
+			Admin.MouseButton1Click:Connect(function()
+				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("HD admin ranker")
+			end)
 		end
 	end)
 else
@@ -210,4 +329,3 @@ else
 	Mapbuilder:Destroy()
 	script:Destroy()
 end
---loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielNov2014/flying/main/Serverside.lua"))()
