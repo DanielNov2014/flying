@@ -12,7 +12,6 @@ local UPD1 = Instance.new("TextLabel")
 local sound = Instance.new("Sound")
 
 --Properties:
-
 Mapbuilder.Name = "Exutor"
 Mapbuilder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Mapbuilder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
