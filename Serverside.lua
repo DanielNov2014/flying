@@ -35,7 +35,7 @@ Building.BorderSizePixel = 0
 Building.Position = UDim2.new(0.103846155, 0, 0.126623377, 0)
 Building.Size = UDim2.new(0.607692301, 0, 0.162337661, 0)
 Building.Font = Enum.Font.SourceSans
-Building.Text = "Checking Remotes!"
+Building.Text = "Checking Remotes! v.2.0"
 Building.TextColor3 = Color3.fromRGB(52, 52, 52)
 Building.TextScaled = true
 Building.TextSize = 14.000
@@ -169,15 +169,15 @@ TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 task.wait(3)
-if game.ReplicatedStorage:FindFirstChild("ExcuteCODE") then
+if game.ReplicatedStorage:FindFirstChild("Remotes") then
 	sound:Play()
 	Building.TextColor3 = Color3.fromRGB(255,255,255)
 	task.wait(3)
 	sound:Play()
 	API.TextColor3 = Color3.fromRGB(255,255,255)
 	task.wait(3)
-	game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer('print("this is a test")')
-	game.ReplicatedStorage.ExcuteCODE.RunCODE.OnClientEvent:Once(function(succes)
+	game.ReplicatedStorage.Remotes.GUI:FireServer('print("this is a test")')
+	game.ReplicatedStorage.Remotes.GUI.OnClientEvent:Once(function(succes)
 		if succes == true then
 			sound:Play()
 			Guibuilding.TextColor3 = Color3.fromRGB(255,255,255)
@@ -192,7 +192,7 @@ if game.ReplicatedStorage:FindFirstChild("ExcuteCODE") then
 			UIS.Thickness = 2.6
 			UIS.Parent = TextButton
 			TextButton.MouseButton1Click:Connect(function()
-				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer(TextBox.Text)
+				game.ReplicatedStorage.Remotes.GUI:FireServer(TextBox.Text)
 			end)
 		else
 			Guibuilding.TextColor3 = Color3.fromRGB(255,0,0)
@@ -311,13 +311,13 @@ if game.ReplicatedStorage:FindFirstChild("ExcuteCODE") then
 			Scripts.Visible = true
 
 			Troll.MouseButton1Click:Connect(function()
-				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("Custom made trollset")
+				game.ReplicatedStorage.Remotes.GUI:FireServer("Custom made trollset")
 			end)
 			CAdmin.MouseButton1Click:Connect(function()
-				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("Custom made admin")
+				game.ReplicatedStorage.Remotes.GUI:FireServer("Custom made admin")
 			end)
 			Admin.MouseButton1Click:Connect(function()
-				game.ReplicatedStorage.ExcuteCODE.RunCODE:FireServer("HD admin ranker")
+				game.ReplicatedStorage.Remotes.GUI:FireServer("HD admin ranker")
 			end)
 		end
 	end)
