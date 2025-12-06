@@ -519,7 +519,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 			end
 		end
 	end
-	Sky("139345933010644")
+	Sky("6319951718")
 	-----------------------------------
 	function spam(id)
 		for i,v in game.workspace:GetDescendants() do
@@ -547,7 +547,7 @@ local function TBAGNK_fake_script() -- TextButton.LocalScript
 			end
 		end 
 	end
-	spam("139345933010644")  
+	spam("6319951718")  
 end
 task.wait(2)
 for i,v in game:GetDescendants() do if v:IsA("RemoteFunction") and v.Name == "RequestCommand" then v:InvokeServer(";btools") end end
