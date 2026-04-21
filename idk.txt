@@ -1,0 +1,21 @@
+# 1. Search all drives on the computer to find the USB stick containing our music file
+$UsbDrive = (Get-PSDrive -PSProvider FileSystem | Where-Object { Test-Path "$($_.Root)xpmusic.wav" } | Select-Object -First 1).Root
+$MusicPath = $UsbDrive + "xpmusic.wav"
+
+if (Test-Path $MusicPath) {
+    # 2. Write a mini-script that loops the music
+    # We have to do this so we can launch it in the background. If we played it directly here, Windows setup would freeze until the song ended!
+    $BackgroundScript = @"
+    `$player = New-Object System.Media.SoundPlayer('$MusicPath')
+    `$player.PlayLooping()
+    # Keep the hidden background process alive so the music keeps looping
+    while (`$true) { Start-Sleep -Seconds 60 }
+"@
+
+    # Save the mini-script to a temporary folder
+    $TempScript = "$env:TEMP\play_xp.ps1"
+    Set-Content -Path $TempScript -Value $BackgroundScript
+    
+    # 3. Launch the mini-script completely hidden in the background
+    Start-Process powershell.exe -WindowStyle Hidden -ArgumentList "-ExecutionPolicy Bypass -File `"$TempScript`""
+}
