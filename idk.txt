@@ -1,39 +1,4 @@
-# Windows 11 Home HWID Activation Script
-# Based on Microsoft Activation Scripts (MAS) logic
-
-# 1. Check for Administrative Privileges
-if (-not ([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544')) {
-    Write-Host "This script needs admin rights. Please run PowerShell as Administrator." -ForegroundColor Red
-    exit
-}
-
-# 2. Verify Windows Build (Windows 10/11 support)
-$winBuild = [int](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").CurrentBuild
-if ($winBuild -lt 10240) {
-    Write-Host "Unsupported Windows version. MAS requires Windows 10/11 for HWID activation." -ForegroundColor Yellow
-    exit
-}
-
-# 3. Identify Edition and Activation Logic
-# The script targets the HWID method which is recommended for Home editions
-Write-Host "Initializing HWID Activation for Windows 11 Home..." -ForegroundColor Cyan
-
-# 4. Activation Execution
-# This block mimics the 'HWIDActivation' subroutine from the provided script
-try {
-    # Generate the activation request using the system's Hardware ID
-    # Note: The full script typically downloads a small gatherosstate.exe replacement 
-    # to generate the ticket. This command triggers the built-in system activation 
-    # check once the logic is applied.
-    
-    $Service = Get-WmiObject -Class SoftwareLicensingService
-    $Service.RefreshLicenseStatus()
-    
-    Write-Host "Activation process initiated successfully." -ForegroundColor Green
-    Write-Host "Please check your activation status in Settings." -ForegroundColor White
-}
-catch {
-    Write-Host "An error occurred during activation: $($_.Exception.Message)" -ForegroundColor Red
-}
-
-Write-Host "Script Completed."
+reg add HKLM\System\Setup /v OOBEInProgress /t REG_DWORD /d 0 /f
+reg add HKLM\System\Setup /v SetupType /t REG_DWORD /d 0 /f
+reg add HKLM\System\Setup /v SystemSetupInProgress /t REG_DWORD /d 0 /f
+shutdown /r /t 0
